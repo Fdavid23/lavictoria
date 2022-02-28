@@ -1,10 +1,10 @@
 @extends('layouts.back-end.app')
-@section('title','FAQ')
+@section('title','Preguntas Frecuentes')
 @push('css_or_js')
     <!-- Custom styles for this page -->
     <link href="{{asset('public/assets/back-end')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <style>
-        
+
         .switch {
             position: relative;
             display: inline-block;
@@ -81,7 +81,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{trans('messages.Dashboard')}}</a></li>
-            <li class="breadcrumb-item" aria-current="page">{{trans('messages.Dashboard')}}{{trans('messages.help_topic')}}</li>
+            <li class="breadcrumb-item" aria-current="page">{{trans('messages.help_topic')}}</li>
         </ol>
     </nav>
 
@@ -138,8 +138,8 @@
                                             <i class="fa fa-sync"></i>
                                         </a>
                                         @endif --}}
-                                        
-{{-- 
+
+{{--
                                         <a href="{{ route('admin.helpTopic.delete',$help->id) }}" class="btn btn-danger btn-sm " onclick="alert('Are You sure to Delete')"  >
                                             <i class="fa fa-trash"></i> --}}
                                             <div class="dropdown">
@@ -152,7 +152,7 @@
                                                     <a class="dropdown-item edit" style="cursor: pointer;" data-toggle="modal" data-target="#editModal" data-id="{{ $help->id }}">
                                                         {{ trans('messages.Edit')}}
                                                     </a>
-                                                    <a class="dropdown-item delete" style="cursor: pointer;" 
+                                                    <a class="dropdown-item delete" style="cursor: pointer;"
                                                     id="{{$help['id']}}"> {{ trans('messages.Delete')}}</a>
                                                 </div>
                                             </div>

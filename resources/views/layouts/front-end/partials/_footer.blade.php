@@ -278,17 +278,17 @@
                         <li class="widget-list-item"><a class="widget-list-link"
                                                         href="{{route('user-account')}}">{{trans('messages.profile_info')}}</a>
                         </li>
-                        <li class="widget-list-item"><a class="widget-list-link"
+                        {{-- <li class="widget-list-item"><a class="widget-list-link"
                                                         href="{{route('wishlists')}}">{{trans('messages.wish_list')}}</a>
-                        </li>
+                        </li> --}}
                         {{--<li class="widget-list-item">
                             <a class="widget-list-link"
                                href="{{route('customer.auth.login')}}">{{trans('messages.chat_with_seller_s')}}
                             </a>
                         </li>--}}
-                        <li class="widget-list-item"><a class="widget-list-link"
+                        {{-- <li class="widget-list-item"><a class="widget-list-link"
                                                         href="{{route('track-order.index')}}">{{trans('messages.track_order')}}</a>
-                        </li>
+                        </li> --}}
                         <li class="widget-list-item"><a class="widget-list-link"
                                                         href="{{ route('account-address') }}">{{trans('messages.address')}}</a>
                         </li>

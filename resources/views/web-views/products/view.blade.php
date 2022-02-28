@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title',ucfirst($data['data_from']).' products')
+@section('title','Patende Productos')
 
 @push('css_or_js')
     <meta property="og:image" content="{{asset('storage/app/public/company')}}/{{$web_config['web_logo']}}"/>
@@ -246,7 +246,7 @@
                     <div class="col-md-6">
                         {{-- if need data from also --}}
                         {{-- <h1 class="h3 text-dark mb-0 headerTitle text-uppercase">{{trans('messages.product_by')}} {{$data['data_from']}} ({{ isset($brand_name) ? $brand_name : $data_from}})</h1> --}}
-                        <h1 class="h3 text-dark mb-3 headerTitle text-uppercase">PATENDE DE  {{trans('messages.products')}} {{ isset($brand_name) ? '('.$brand_name.')' : ''}}</h1>
+                        <h1 class="h3 text-dark mb-3 headerTitle text-uppercase">PATENTE DE  {{trans('messages.products')}} {{ isset($brand_name) ? '('.$brand_name.')' : ''}}</h1>
                     </div>
                     <div class="col-md-6 for-display">
 

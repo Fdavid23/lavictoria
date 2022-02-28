@@ -124,7 +124,7 @@
 
 
                         <li class="nav-item">
-                            <small class="nav-subtitle" title="Pages">{{trans('messages.product_management')}}</small>
+                            <small class="nav-subtitle" title="Pages">{{trans('messages.product_management')}}mbvmbv</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
 
@@ -136,7 +136,7 @@
                                title="Pages">
                                 <i class="tio-flag nav-icon"></i>
                                 <span
-                                    class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{trans('messages.Brand')}}</span>
+                                    class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{trans('messages.Brand')}} o Patente</span>
                             </a>
                             <ul class="js-navbar-vertical-aside-submenu nav nav-sub"
                                 style="display: {{Request::is('admin/brand*')?'block':'none'}}">
@@ -199,14 +199,14 @@
 
 
                                  </li>
-                                           <li class="nav-item {{Request::is('admin/sub-sub-category/view')?'active':''}}">
+                                           {{-- <li class="nav-item {{Request::is('admin/sub-sub-category/view')?'active':''}}">
                                               <a class="nav-link " href="{{route('admin.sub-sub-category.view')}}" title="add new sub-sub-category">
                                               <span class="tio-circle nav-indicator-icon"></span>
                                                       <span class="text-truncate">{{trans('messages.sub_sub_category')}}</span>
                                                   </a>
 
 
-                                         </li>
+                                         </li> --}}
                             </ul>
                         </li>
                         @endif
@@ -383,12 +383,12 @@
                         <span class="text-truncate">{{trans('messages.deal_of_the_day')}}</span>
                     </a>
                 </li>
-                <li class="nav-item {{Request::is('admin/deal/feature')?'active':''}}">
+                {{-- <li class="nav-item {{Request::is('admin/deal/feature')?'active':''}}">
                     <a class="nav-link " href="{{route('admin.deal.feature')}}" title=" deal List">
                         <span class="tio-circle nav-indicator-icon"></span>
                         <span class="text-truncate">{{trans('messages.feature_deal')}}</span>
                     </a>
-                </li>
+                </li> --}}
 
             </ul>
         </li>
@@ -412,7 +412,7 @@
                             </a>
                         </li>
                         @endif
-                        @if(\App\CPU\Helpers::module_permission_check('productReview'))
+                        {{-- @if(\App\CPU\Helpers::module_permission_check('productReview'))
                         <li class="navbar-vertical-aside-has-menu {{Request::is('admin/reviews*')?'active':''}}">
                             <a class="js-navbar-vertical-aside-menu-link nav-link"
                                href="{{route('admin.reviews.list')}}"
@@ -423,7 +423,7 @@
                                 </span>
                             </a>
                         </li>
-                        @endif
+                        @endif --}}
                         <!-- Pages -->
                         @if(\App\CPU\Helpers::module_permission_check('messages'))
                         <li class="navbar-vertical-aside-has-menu {{Request::is('admin/contact*')?'active':''}}">
@@ -451,7 +451,7 @@
                         </li>
 
     @endif
-    @if(\App\CPU\Helpers::module_permission_check('notification'))
+    {{-- @if(\App\CPU\Helpers::module_permission_check('notification'))
     <li class="navbar-vertical-aside-has-menu {{Request::is('admin/notification*')?'active':''}}">
         <a class="js-navbar-vertical-aside-menu-link nav-link"
            href="{{route('admin.notification.add-new')}}"
@@ -462,7 +462,7 @@
             </span>
         </a>
     </li>
-    @endif
+    @endif --}}
 
 
 

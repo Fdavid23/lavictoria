@@ -208,7 +208,7 @@
                                             <div class="col-md-3 mb-3 mb-md-0 product-name">
                                                 <p>
                                                     {{substr($detail->product['name'],0,10)}}{{strlen($detail->product['name'])>10?'...':''}}</p>
-                                                <strong><u>Talla: </u></strong>
+                                                <strong><u>Mililitro/Litro: </u></strong>
 
                                                 <div class="font-size-sm text-body">
 

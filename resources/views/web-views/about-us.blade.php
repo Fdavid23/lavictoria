@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title','About Us')
+@section('title','Acerca de')
 
 @push('css_or_js')
     <style>
@@ -37,7 +37,7 @@
 
 @section('content')
     <div class="container for-container">
-        <h2 class="text-center mt-3 headerTitle">About Our Company</h2>
+        <h2 class="text-center mt-3 headerTitle">Sobre nuestra Empresa</h2>
         <div class="for-padding">
             {!! $about_us['value'] !!}
         </div>

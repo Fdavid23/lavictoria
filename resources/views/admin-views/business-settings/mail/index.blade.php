@@ -1,5 +1,5 @@
  @extends('layouts.back-end.app')
- @section('title','Mail Config')
+ @section('title','Configuración de correo')
 @push('css_or_js')
 
 @endpush
@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body" style="padding: 20px">
-                  
+
                     @php($config=\App\Model\BusinessSetting::where(['type'=>'mail_config'])->first())
                     @php($data=json_decode($config['value'],true))
                     <form action="{{route('admin.business-settings.mail.update')}}"

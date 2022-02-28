@@ -351,7 +351,7 @@
                                 <!-- Legend Indicators -->
                                 <div class="row font-size-sm">
                                     <div class="col-auto">
-                                        <h5 class="card-header-title">Monthly Earning</h5>
+                                        <h5 class="card-header-title">Ganancia mensual</h5>
                                     </div>
                                 </div>
                                 <!-- End Legend Indicators -->

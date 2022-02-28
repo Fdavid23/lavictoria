@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <input id="datatableSearch" type="search" class="form-control"
-                                       placeholder="Search customer" aria-label="Search customer">
+                                       placeholder="Buscar cliente" aria-label="Search customer">
                             </div>
                             <!-- End Search -->
                         </form>
@@ -87,7 +87,7 @@
                                      "target": "#showHideDropdown",
                                      "type": "css-animation"
                                    }'>
-                                    <i class="tio-table mr-1"></i> Columns <span
+                                    <i class="tio-table mr-1"></i> Columnas <span
                                         class="badge badge-soft-dark rounded-circle ml-1">6</span>
                                 </a>
 
@@ -97,7 +97,7 @@
                                     <div class="card card-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="mr-2">Name</span>
+                                                <span class="mr-2">Nombre</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm" for="toggleColumn_name">
@@ -125,7 +125,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="mr-2">Phone</span>
+                                                <span class="mr-2">Télefono</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm"
@@ -140,7 +140,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="mr-2">Total order</span>
+                                                <span class="mr-2">Orden Total </span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm"
@@ -155,7 +155,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <span class="mr-2">Actions</span>
+                                                <span class="mr-2">Acciones</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm"
@@ -266,7 +266,7 @@
                 <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
                     <div class="col-sm mb-2 mb-sm-0">
                         <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
-                            <span class="mr-2">Showing:</span>
+                            <span class="mr-2">Mostrar:</span>
 
                             <!-- Select -->
                             <select id="datatableEntries" class="js-select2-custom"
@@ -283,7 +283,7 @@
                             </select>
                             <!-- End Select -->
 
-                            <span class="text-secondary mr-2">of</span>
+                            <span class="text-secondary mr-2">de</span>
 
                             <!-- Pagination Quantity -->
                             <span id="datatableWithPaginationInfoTotalQty"></span>

@@ -73,12 +73,12 @@
         }
 
     }
-    
+
         #main-banner-image-modal .modal-content{
                  width: 1116px !important;
                margin-left: -264px !important;
            }
-          
+
            #secondary-banner-image-modal .modal-content{
                  width: 1116px !important;
                margin-left: -264px !important;
@@ -100,8 +100,8 @@
                    width: 698px !important;
        margin-left: -75px !important;
            }
-           
-         
+
+
            }
            @media(max-width:375px){
                #main-banner-image-modal .modal-content{
@@ -116,9 +116,9 @@
                  width: 367px !important;
                margin-left: 0 !important;
            }
-          
+
            }
-    
+
       @media(max-width:500px){
        #main-banner-image-modal .modal-content{
                  width: 400px !important;
@@ -132,8 +132,8 @@
                  width: 400px !important;
                margin-left: 0 !important;
            }
-           
-         
+
+
           }
       }
     </style>
@@ -318,7 +318,7 @@
                                     <td><label class="switch"><input type="checkbox" class="status"
                                                                      id="{{$banner->id}}" <?php if ($banner->published == 1) echo "checked" ?>><span
                                                 class="slider round"></span></label></td>
-                                   
+
                                     <td>
                                         <div class="dropdown">
                                             <button class="btn btn-outline-secondary dropdown-toggle" type="button"
@@ -440,7 +440,7 @@
         });
 
   $(document).on('click', '.edit', function () {
-          
+
             var id = $(this).attr("id");
             $.ajaxSetup({
                 headers: {
@@ -452,30 +452,30 @@
                 method: 'POST',
                 data: {id: id},
                 success: function (data) {
-                 
+
                     // console.log(data);
                     if(data.banner_type=='Main Banner'){
-                        
-                        $('#main-banner').show(); 
+
+                        $('#main-banner').show();
                         $('#banner-table').hide();
                     $('#add').hide();
                     $('#update').show();
                     $('#id').val(data.id);
                         $('#url').val(data.url);
-                        $('#cate-table').hide(); 
-                      
+                        $('#cate-table').hide();
+
                     }
                     else if(data.banner_type=='Footer Banner')
                     {
-                        
-                      $('#secondary-banner').show(); 
+
+                      $('#secondary-banner').show();
                       $('#banner-table').hide();
                     $('#addfooter').hide();
                     $('#footerupdate').show();
                     $('#id').val(data.id);
                         $('#footerurl').val(data.url);
-                        $('#cate-table').hide(); 
-                       
+                        $('#cate-table').hide();
+
 
                     }
                     else{
@@ -485,10 +485,10 @@
                     $('#popupupdate').show();
                     $('#id').val(data.id);
                         $('#popupurl').val(data.url);
-                        $('#cate-table').hide();  
+                        $('#cate-table').hide();
                     }
-                    
-                  
+
+
                 }
             });
         });
@@ -497,7 +497,7 @@
             var id = $('#id').val();
             var name = $('#url').val();
             var type =  $('#type').val();
-           
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
@@ -511,7 +511,7 @@
                     id: id,
                     url: name,
                     banner_type: type,
-                   
+
                 },
                 success: function (data) {
                     console.log(data);
@@ -534,13 +534,13 @@
                         },
                     });
                     toastr.success('Main Banner updated Successfully.');
-                  
-                    
+
+
                     location.reload();
                 }
             });
             $('#save').hide();
-            
+
         });
         $('#footerupdate').on('click', function () {
             $('#footerupdate').attr("disabled", true);
@@ -548,7 +548,7 @@
             var name = $('#footerurl').val();
             var type =  $('#footertype').val();
             console.log(type)
-           
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
@@ -562,10 +562,10 @@
                     id: id,
                     url: name,
                     banner_type: type,
-                   
+
                 },
                 success: function (data) {
-                  
+
                     $('#url').val('');
                     $.ajax({
                         type: 'get',
@@ -585,21 +585,21 @@
                         },
                     });
                     toastr.success('Secondary Banner updated Successfully.');
-                  
-                    
+
+
                     location.reload();
                 }
             });
             $('#save').hide();
-            
+
         });
         $('#popupupdate').on('click', function () {
             $('#popupupdate').attr("disabled", true);
             var id = $('#id').val();
             var name = $('#popupurl').val();
             var type =  $('#popuptype').val();
-            
-           
+
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
@@ -613,10 +613,10 @@
                     id: id,
                     url: name,
                     banner_type: type,
-                   
+
                 },
                 success: function (data) {
-                  
+
                     $('#url').val('');
                     $.ajax({
                         type: 'get',
@@ -636,15 +636,15 @@
                         },
                     });
                     toastr.success('Popup Banner updated Successfully.');
-                  
-                    
+
+
                     location.reload();
                 }
             });
             $('#save').hide();
-            
+
         });
-       
+
     </script>
 
     @include('shared-partials.image-process._script',[
