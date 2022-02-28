@@ -107,7 +107,7 @@
 
             <div class="col-6">
                 <a href="{{route('checkout-details')}}" class="btn btn-primary pull-right">
-                    Continuar con compra <i class="fa fa-forward"></i>
+                    Continuar con la compra <i class="fa fa-forward"></i>
                 </a>
             </div>
         </div>
