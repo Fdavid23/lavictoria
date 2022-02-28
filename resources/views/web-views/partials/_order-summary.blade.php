@@ -48,7 +48,7 @@
                 @php($total_pro=$total_pro+$cartItem['quantity'])
             @endforeach
         @else
-            <span>Empty Cart</span>
+            <span>Carro vacio</span>
         @endif
         <div class="d-flex justify-content-between">
             <span class="cart_title">Sub Total</span>
@@ -86,7 +86,7 @@
             <div class="mt-2">
                 <form class="needs-validation" method="post" novalidate id="coupon-code-ajax">
                     <div class="form-group">
-                        <input class="form-control input_code" type="text" name="code" placeholder="Coupon code"
+                        <input class="form-control input_code" type="text" name="code" placeholder="Código promocional"
                                required>
                         <div class="invalid-feedback">Proporcione el código de cupón.</div>
                     </div>

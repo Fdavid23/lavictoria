@@ -140,7 +140,7 @@
                 </div>
             </div>
         </div>
-        <div class="pb-0" style="padding-top: 12px;">
+        {{-- <div class="pb-0" style="padding-top: 12px;">
             <!-- Filter by price-->
             <div class="sidebarL">
                 <h3 class="widget-title btnF" style="font-weight: 700;">
@@ -150,8 +150,8 @@
                      style="border: 1px solid whitesmoke; margin-bottom: 14px;  margin-top: -6px;">
                 </div>
             </div>
-        </div>
-        <div class="pb-0" style="padding-top: 12px;">
+        </div> --}}
+        {{-- <div class="pb-0" style="padding-top: 12px;">
             <!-- Filter by price-->
             <div class="sidebarL">
                 <h3 class="widget-title btnF " style="font-weight: 700;">
@@ -160,10 +160,10 @@
                      style="border: 1px solid whitesmoke; margin-bottom: 14px;  margin-top: -6px;">
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         {{--to do--}}
-        <div class="pb-0" style="padding-top: 12px;">
+        {{-- <div class="pb-0" style="padding-top: 12px;">
             <!-- Filter by price-->
             <div class="sidebarL">
                 <h3 class="widget-title btnF" style="font-weight: 700;">
@@ -173,7 +173,7 @@
                      style="border: 1px solid whitesmoke; margin-bottom: 14px;  margin-top: -6px;">
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="pb-0" style="padding-top: 12px;">
             <!-- Filter by price-->

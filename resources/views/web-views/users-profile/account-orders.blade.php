@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title','My Order List')
+@section('title','Mi lista de pedidos')
 
 @push('css_or_js')
     <link rel="stylesheet" media="screen"
@@ -148,10 +148,10 @@
                             </thead>
 
                             <tbody>
-                            
+
                             @foreach($orders as $order)
 
-                        
+
                                 <tr>
                                     @if($order['id']>0)
                                     <td class="bodytr font-weight-bold">
@@ -165,15 +165,39 @@
                                     <td class="bodytr">
                                         @if($order['order_status']=='failed' || $order['order_status']=='canceled')
                                             <span class="badge badge-danger" style="padding: 10px">
-                                                {{$order['order_status']}}
+                                                @if($order['order_status']=='failed')
+                                                <span class="legend-indicator bg-danger"></span>Fállo
+                                                @else
+                                                <span class="legend-indicator bg-danger"></span>Cancelado
+                                                @endif
                                             </span>
                                             <a style="margin: 10px"
                                                href="{{route('customer.payment-mobile',['order_id'=>$order['id'],'customer_id'=>auth('customer')->id()])}}"
-                                               class="btn btn-secondary btn-sm">Pay Now</a>
+                                               class="btn btn-secondary btn-sm">Pagar Ahora</a>
                                         @else
-                                            <span class="badge badge-info" style="padding: 10px">
-                                                {{$order['order_status']}}
-                                            </span>
+
+                                        @if($order['order_status']=='pending')
+                                        <span class="badge badge-soft-success ml-sm-3">
+                                            <span class="legend-indicator bg-success"></span>Pendiente
+                                        </span>
+                                    @elseif($order['order_status']=='processed')
+                                        <span class="badge badge-soft-danger ml-sm-3">
+                                            <span class="legend-indicator bg-danger"></span>Procesando
+                                        </span>
+                                        @elseif($order['order_status']=='returned')
+                                        <span class="badge badge-soft-danger ml-sm-3">
+                                            <span class="legend-indicator bg-danger"></span>Devuelto
+                                        </span>
+                                        @elseif($order['order_status']=='delivered')
+                                        <span class="badge badge-soft-danger ml-sm-3">
+                                            <span class="legend-indicator bg-danger"></span>Entregado
+                                        </span>
+                                        @else
+                                        <span class="badge badge-soft-danger ml-sm-3">
+                                            <span class="legend-indicator bg-danger"></span>Fállo
+                                        </span>
+
+                                    @endif
                                         @endif
                                     </td>
                                     <td class="bodytr">
@@ -186,19 +210,19 @@
                                         </a>
                                     </td>
                                     @else
-                                    
+
                                     <td></td>
                                     <td></td>
                                     <td>
                                         <center class="mt-3 mb-2"> NO Order Found</center>
-                                       
+
                                     </td>
                                     <td></td>
                                     <td></td>
-                                
+
                                     @endif
                                 </tr>
-                             
+
                             @endforeach
                             </tbody>
                         </table>

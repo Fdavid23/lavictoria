@@ -64,7 +64,7 @@ class UserProfileController extends Controller
         ];
         if (auth('customer')->check()) {
             User::where(['id' => auth('customer')->id()])->update($userDetails);
-            Toastr::info(' your Profile is update!');
+            Toastr::info(' ¡Tu perfil está actualizado!');
             return redirect()->back();
         } else {
             return redirect()->back();

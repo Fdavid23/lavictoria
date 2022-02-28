@@ -14,7 +14,7 @@
 .btn-outline:hover {
     color: white;
     background: {{$web_config['primary_color']}};
-    
+
 }
 .btn-outline:focus{
     border-color:{{$web_config['primary_color']}}  !important;
@@ -144,7 +144,7 @@
                             <a class="btn btn-secondary btn-block" href="{{route('checkout-details')}}">
                                 <i class="czi-arrow-left mt-sm-0 mr-1"></i>
                                 <span
-                                    class="d-none d-sm-inline">{{ trans('messages.Back')}} {{ trans('messages.to')}} {{ trans('messages.address')}}</span>
+                                    class="d-none d-sm-inline">{{ trans('messages.Back')}} a {{ trans('messages.address')}}</span>
                                 <span class="d-inline d-sm-none">{{ trans('messages.Back')}}</span>
                             </a>
                         </div>
