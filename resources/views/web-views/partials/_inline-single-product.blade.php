@@ -91,7 +91,7 @@
             <a class="ptr ptr1" href="{{route('product',$product->slug)}}">{{$product['name']}}</a>
         </h3>
         @php($overallRating=\App\CPU\ProductManager::get_overall_rating($product->reviews))
-        <h6 class="ptr">
+        {{-- <h6 class="ptr">
             <span class="d-inline-block text-body align-middle mt-1 mr-2"
                   style="color: #fea96e !important; font-size: 10px!important;">{{$overallRating[0]}} </span>
             <span class="star-rating">
@@ -134,7 +134,7 @@
                     @endfor
                 @endif
             </span>
-        </h6>
+        </h6> --}}
         <div class="product-price">
             <span class="text-accent ptp">
             {{\App\CPU\Helpers::currency_converter(

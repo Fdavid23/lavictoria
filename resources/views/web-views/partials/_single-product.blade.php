@@ -42,11 +42,7 @@
                     </strike>
                 @endif
             </div>
-            <div style="margin-top: -4px;" class="product-title">
-                <span
-                    class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 ">{{$overallRating[0]}}</span>
-                <span class="star-rating"> <i class="sr-star czi-star-filled active"></i></span>
-            </div>
+
         </div>
     </div>
 

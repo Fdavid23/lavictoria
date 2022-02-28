@@ -455,7 +455,7 @@
                             <div class="col-xl-12 col-12">
                                 <div class="d-inline-flex displayTab">
                                    <marquee behavior="" direction=""><center><span class="flash_deal_title mr-3">
-                                    Si tu compra es superior a 6 productos de la misma recibe un descuento adicional
+                                    Si tu compra es superior a 6 prendas de la misma recibe un descuento del 30%
                                 </span></center></marquee>
                                 </div>
                             </div>

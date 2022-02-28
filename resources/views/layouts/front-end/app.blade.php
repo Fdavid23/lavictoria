@@ -70,7 +70,7 @@
         }
 
         .search_button {
-            background-color: {{$web_config['secondary_color']}};
+            background-color: {{$web_config['primary_color']}};
             border: none;
         }
 

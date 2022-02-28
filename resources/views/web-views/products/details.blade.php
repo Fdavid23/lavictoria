@@ -249,57 +249,7 @@
             <div class="col-lg-6 col-md-6 mt-md-0 mt-sm-3">
                 <div class="details">
                     <h1 class="h3 mb-2">{{$product->name}}</h1>
-                    <div class="d-flex align-items-center mb-2 pro">
-                        <span
-                            class="d-inline-block font-size-sm text-body align-middle mt-1 mr-md-2 mr-sm-0 pr-2">{{$overallRating[0]}}</span>
-                        <div class="star-rating">
-                            @if ($overallRating[0]==5)
-                                @for ($i = 0; $i < 5; $i++)
-                                    <i class="sr-star czi-star-filled active"></i>
-                                @endfor
-                            @endif
-                            @if ($overallRating[0]==4)
-                                @for ($i = 0; $i < 4; $i++)
-                                    <i class="sr-star czi-star-filled active"></i>
-                                @endfor
-                                <i class="sr-star czi-star"></i>
-                            @endif
-                            @if ($overallRating[0]==3)
-                                @for ($i = 0; $i < 3; $i++)
-                                    <i class="sr-star czi-star-filled active"></i>
-                                @endfor
-                                @for ($j = 0; $j < 2; $j++)
-                                    <i class="sr-star czi-star"></i>
-                                @endfor
-                            @endif
-                            @if ($overallRating[0]==2)
-                                @for ($i = 0; $i < 2; $i++)
-                                    <i class="sr-star czi-star-filled active"></i>
-                                @endfor
-                                @for ($j = 0; $j < 3; $j++)
-                                    <i class="sr-star czi-star"></i>
-                                @endfor
-                            @endif
-                            @if ($overallRating[0]==1)
-                                @for ($i = 0; $i < 4; $i++)
-                                    <i class="sr-star czi-star-filled active"></i>
-                                @endfor
-                                <i class="sr-star czi-star"></i>
-                            @endif
-                            @if ($overallRating[0]==0)
-                                @for ($i = 0; $i < 5; $i++)
-                                    <i class="sr-star czi-star"></i>
-                                @endfor
-                            @endif
-                        </div>
-                        <span
-                            class="font-for-tab d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-md-2 mr-1 pl-md-2 pl-sm-1 pr-md-2 pr-sm-1">{{$overallRating[1]}} {{trans('messages.Reviews')}}</span>
-                        <span style="width: 0px;height: 10px;border: 0.5px solid #707070; margin-top: 6px"></span>
-                        <span
-                            class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-md-2 mr-1 pl-md-2 pl-sm-1 pr-md-2 pr-sm-1 font-for-tab">{{$countOrder}} {{trans('messages.orders')}}   </span>
-                        <span style="width: 0px;height: 10px;border: 0.5px solid #707070; margin-top: 6px">    </span>
 
-                    </div>
                     <div class="mb-3">
                         <span class="h3 font-weight-normal text-accent mr-1">
                             {{\App\CPU\Helpers::get_price_range($product) }}
@@ -595,11 +545,7 @@
                        INFORMACIÓN GENERAL
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#reviews" data-toggle="tab" role="tab" style="color: black !important;">
-                        OPINIONES
-                    </a>
-                </li>
+
             </ul>
             <div class="px-4 pt-lg-3 pb-3 mb-3">
                 <div class="tab-content px-lg-3">

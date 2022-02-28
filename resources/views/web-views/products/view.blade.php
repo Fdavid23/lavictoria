@@ -149,19 +149,19 @@
         }
 @media (max-width:360px){
     .openbtn{
-                width:59%; 
+                width:59%;
             }
             .for-shoting-mobile {
                 margin-right: 0% !important;
             }
             .for-mobile {
-               
+
                 margin-left: 10% !important;
             }
 
 }
         @media screen and (min-width: 375px) {
-           
+
             .for-shoting-mobile {
                 margin-right: 7% !important;
             }
@@ -175,7 +175,7 @@
 
         @media (max-width: 500px) {
             .for-mobile {
-              
+
                 margin-left: 27%;
             }
 
@@ -196,30 +196,30 @@
             .openbtn-tab {
             margin-top: 0 !important;
             }
-            
+
         }
 
         @media screen and (min-width: 500px) {
             .openbtn {
                 display: none !important;
             }
-            
-          
-           
+
+
+
         }
         @media screen and (min-width: 800px) {
-           
-            
+
+
             .for-tab-display{
                 display: none !important ;
             }
-           
+
         }
-       
+
         @media (max-width:768px){
             .headerTitle {
             font-size: 23px;
-            
+
         }
         .openbtn-tab {
             margin-top: 3rem;
@@ -228,7 +228,7 @@
             .for-tab-display{
                 display: inline ;
             }
-        
+
         }
 
     </style>
@@ -237,7 +237,7 @@
     <!-- Page Title-->
     <div class="container">
         <div class="row">
-            <div class="col-md-3"> 
+            <div class="col-md-3">
                    <a class="openbtn-tab" style="" onclick="openNav()">
                 <div style="font-size: 20px; font-weight: 600; " class="for-tab-display">☰ {{trans('messages.Open Sidebar')}}</div>
             </a></div>
@@ -246,7 +246,7 @@
                     <div class="col-md-6">
                         {{-- if need data from also --}}
                         {{-- <h1 class="h3 text-dark mb-0 headerTitle text-uppercase">{{trans('messages.product_by')}} {{$data['data_from']}} ({{ isset($brand_name) ? $brand_name : $data_from}})</h1> --}}
-                        <h1 class="h3 text-dark mb-3 headerTitle text-uppercase">{{$data['data_from']}} {{trans('messages.products')}} {{ isset($brand_name) ? '('.$brand_name.')' : ''}}</h1>
+                        <h1 class="h3 text-dark mb-3 headerTitle text-uppercase">PATENDE DE  {{trans('messages.products')}} {{ isset($brand_name) ? '('.$brand_name.')' : ''}}</h1>
                     </div>
                     <div class="col-md-6 for-display">
 
@@ -264,7 +264,7 @@
                                         <span class="mr-2">{{trans('messages.sort_by')}}</span></label>
                                     <select style="background: whitesmoke; appearance: auto;"
                                             class="form-control custom-select" onchange="filter(this.value)">
-                                        <option value="latest">{{trans('messages.Latest')}}</option>
+                                        <option value="latest">Más reciente</option>
                                         <option
                                             value="low-high">{{trans('messages.tow_hight')}} {{trans('messages.Price')}} </option>
                                         <option
@@ -301,9 +301,13 @@
                         <!-- Filter by price-->
                         <div class="widget cz-filter mb-4 pb-4 mt-2">
                             <h3 class="widget-title" style="font-weight: 700;">{{trans('messages.Price')}}</h3>
+
                             <div class="divider-role"
                                  style="border: 1px solid whitesmoke; margin-bottom: 14px;  margin-top: -6px;"></div>
                             <div class="input-group-overlay input-group-sm mb-1">
+                                <div>
+                                    <p style="text-align: center;margin-bottom: 1px;">Desde</p>
+                                </div>
                                 <input style="background: aliceblue;"
                                        class="cz-filter-search form-control form-control-sm appended-form-control"
                                        type="number" value="0" min="0" max="1000000" id="min_price">
@@ -314,7 +318,7 @@
                                 </div>
                             </div>
                             <div>
-                                <p style="text-align: center;margin-bottom: 1px;">{{trans('messages.to')}}</p>
+                                <p style="text-align: center;margin-bottom: 1px;">Hasta</p>
                             </div>
                             <div class="input-group-overlay input-group-sm mb-2">
                                 <input style="background: aliceblue;" value="100" min="100" max="1000000"
@@ -351,7 +355,7 @@
                             <div class="divider-role"
                                  style="border: 1px solid whitesmoke; margin-bottom: 14px;  margin-top: -6px;"></div>
                             <div class="input-group-overlay input-group-sm mb-2">
-                                <input style="background: aliceblue" placeholder="Search brand"
+                                <input style="background: aliceblue" placeholder="Buscar marca"
                                        class="cz-filter-search form-control form-control-sm appended-form-control"
                                        type="text" id="search-brand">
                                 <div class="input-group-append-overlay">
@@ -522,7 +526,7 @@
 
                                                 @endif
                                             </li>
-                                            
+
                                         </div>
                                     @endforeach
                                 </ul>
