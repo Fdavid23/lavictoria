@@ -443,7 +443,7 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
-                            <a class="nav-link" href="{{route('home')}}">{{ trans('messages.Home')}}</a>
+                            <a class="nav-link" href="{{route('home')}}">Productos</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -466,7 +466,10 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
-                            <a class="nav-link"  href="{{ route('contacts') }}">Contacto</a>
+                            <a class="nav-link"  href="{{ route('about-us') }}">Nosotros </a>
+                        </li>
+                        <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
+                            <a class="nav-link"  href="{{ route('contacts') }}">Contacto </a>
                         </li>
 
                     </ul>

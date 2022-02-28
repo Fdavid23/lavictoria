@@ -201,7 +201,7 @@
                                              onerror="this.src='{{asset('public/assets/back-end/img/160x160/img2.jpg')}}'"
                                              src="{{\App\CPU\ProductManager::product_image_path('thumbnail')}}/{{$detail->product['thumbnail']}}"
                                              alt="Image Description">
-                                    </div>
+                                    </div >
 
                                     <div class="media-body">
                                         <div class="row">

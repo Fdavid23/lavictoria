@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 //use App\Http\Controllers\Web;
 
 Route::group(['namespace' => 'Web'], function () {
-    Route::get('/', 'WebController@home')->name('home');
+    // Route::get('/', 'WebController@home')->name('home');
+    Route::get('/', 'WebController@about_us')->name('about-us');
+    Route::get('home', 'WebController@home')->name('home');
     Route::get('quick-view', 'WebController@quick_view')->name('quick-view');
     Route::get('searched-products', 'WebController@searched_products')->name('searched-products');
     Route::get('checkout-details', 'WebController@checkout_details')->name('checkout-details');
@@ -47,7 +49,7 @@ Route::group(['namespace' => 'Web'], function () {
 
     Route::post('/currency', 'CurrencyController@changeCurrency')->name('currency.change');
 
-    Route::get('about-us', 'WebController@about_us')->name('about-us');
+
     //profile Route
     Route::get('user-account', 'UserProfileController@user_account')->name('user-account');
     Route::post('user-account-update', 'UserProfileController@user_update')->name('user-update');
