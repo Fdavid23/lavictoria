@@ -136,8 +136,11 @@
 
 <header class="box-shadow-sm">
     <!-- Topbar-->
+
+
     <div class="topbar">
         <div class="container ">
+
             <div >
                 @php
                     $locale = session()->get('locale') ;
@@ -209,6 +212,7 @@
             <div class="d-none d-md-block ml-3 text-nowrap">
                 <a class="topbar-link d-none d-md-inline-block" href="tel:{{$company_phone}}">
                     <i class="fa fa-phone"></i> {{$company_phone}}
+
                 </a>
             </div>
         </div>

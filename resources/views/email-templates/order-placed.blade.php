@@ -104,9 +104,9 @@
 <!-- end preheader -->
 <div class="card">
     <div class="card-header">
-        Your Order has been placed.
-        Order ID : {{$id}}.
-        We will contact you soon.
+        Su orden ha sido Tomada.
+        Pedido Número : {{$id}}.
+        La contactaremos pronto.
     </div>
 </div>
 

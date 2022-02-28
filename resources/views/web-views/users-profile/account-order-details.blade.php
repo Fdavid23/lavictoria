@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title','Order Details')
+@section('title','Detalle Pedido')
 
 @push('css_or_js')
 
@@ -181,7 +181,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <a class="page-link" href="{{ route('account-oder') }}">
-                            <i class="czi-arrow-left mr-2"></i>Back
+                            <i class="czi-arrow-left mr-2"></i>Atrás
                         </a>
                     </div>
                 </div>
@@ -268,14 +268,42 @@
                                             </td>
                                         </div>
                                         <td width="20%">
-                                            <span class="font-weight-bold amount text-capitalize">{{$order->order_status}}</span> {{--if order table changed then change the status--}}
-                                        </td>
+
+
+
+
+                                            @if($order['order_status']=='pending')
+                                            <span class="badge badge-soft-success ml-sm-3">
+                                                <span class="legend-indicator bg-success"></span>Pendiente
+                                            </span>
+                                        @elseif($order['order_status']=='processed')
+                                            <span class="badge badge-soft-danger ml-sm-3">
+                                                <span class="legend-indicator bg-danger"></span>Procesando
+                                            </span>
+                                            @elseif($order['order_status']=='returned')
+                                            <span class="badge badge-soft-danger ml-sm-3">
+                                                <span class="legend-indicator bg-danger"></span>Devuelto
+                                            </span>
+                                            @elseif($order['order_status']=='delivered')
+                                            <span class="badge badge-soft-danger ml-sm-3">
+                                                <span class="legend-indicator bg-danger"></span>Entregado
+                                            </span>
+                                            @else
+                                            <span class="badge badge-soft-danger ml-sm-3">
+                                                <span class="legend-indicator bg-danger"></span>Fállo
+                                            </span>
+
+                                        @endif
+
+
+
+                                 </td>
                                         <div class="col-md-6">
                                             <td width="20%">
                                                 <div class="text-right">
                                                     <span class="font-weight-bold amount">{{\App\CPU\Helpers::currency_converter($detail->price)}} </span>
                                                     <br>
-                                                    <span>qty: {{$detail->qty}}</span>
+                                                    <span>Cantidad: {{$detail->qty}}</span>
 
                                                 </div>
                                             </td>
@@ -284,10 +312,10 @@
                                     <td>
                                         @if($order->order_status=='delivered')
                                             <a href="javascript:" class="btn btn-primary btn-sm" data-toggle="modal"
-                                               data-target="#review-{{$detail->id}}">Review</a>
+                                               data-target="#review-{{$detail->id}}">Revisar</a>
                                         @else
                                             <label class="badge badge-secondary">
-                                                <a href="javascript:" class="btn btn-primary btn-sm disabled">Review</a>
+                                                <a href="javascript:" class="btn btn-primary btn-sm disabled">Revisar</a>
                                             </label>
                                         @endif
                                     </td>
@@ -403,11 +431,11 @@
                        style="width:49%;">
                         {{trans('messages.generate_invoice')}}
                     </a>
+
                     <a id="track_order" class="btn btn-secondary" type="button"
                     style="width:50%; color: white">
-                     {{trans('messages.Track')}} {{trans('messages.Order')}}
+                     Seguir {{trans('messages.Order')}}
                  </a>
-
                 </div>
             </section>
         </div>
