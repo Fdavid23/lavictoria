@@ -223,10 +223,8 @@
             <div class="container ">
                 <a class="navbar-brand d-none d-sm-block mr-3 flex-shrink-0 tab-logo" href="{{route('admin.auth.login')}}"
                    style="min-width: 7rem;">
-                    <img width="250" height="60" style="height: 60px!important;"
-                         src="{{asset("storage/app/public/company/$company_web_logo")}}"
-                         onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                         alt="{{$company_name}}"/>
+                    <img width="100px" height="110px" style="height: 60px!important;"
+                    src="{{ asset('public/assets/front-end/img/logo27.png') }}"/>
                 </a>
                 <a class="navbar-brand d-sm-none mr-2" href="{{route('home')}}">
                     <img width="100" height="60" style="height: 60px!important;"

@@ -175,10 +175,8 @@
             <div class="col-md-3 col-lg-3 col-xl-3 mr-auto mt-3">
                 <div class="text-nowrap mb-4">
                     <a class="d-inline-block align-middle mt-n1 mr-3" href="{{route('home')}}">
-                        <img width="250" style="height: 60px!important;"
-                             src="{{asset("storage/app/public/company/")}}/{{ $web_config['footer_logo']->value }}"
-                             onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                             alt="{{ $web_config['name']->value }}"/>
+                        <img width="225px" style="height: 150px!important;"
+                        src="{{ asset('public/assets/front-end/img/logo27.png') }}"/>
                     </a>
                 </div>
 
