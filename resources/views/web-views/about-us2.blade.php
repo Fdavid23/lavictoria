@@ -248,6 +248,40 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <div class="container" style="margin-top:3%; ">
+    <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="{{ asset('public/assets/front-end/img/Productos/mora.png') }}" class="card-img-top" alt="A Street in Europe" style="height:200px; width:50%; margin-left: 25%">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align:center">Yogurt</h5>
+                    <p class="card-text">El yogur, —también conocido como yogurt, yoghourt, yogourt, yoghurt, yogurth o yagurt ​ - es un producto lácteo obtenido mediante la fermentación de la leche​ por medio de bacterias de los géneros Lactobacillus y Streptococcus.</p>
+                    <a href="#" class="btn btn-primary">Ir Principal</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="{{ asset('public/assets/front-end/img/qr.jpeg') }}" class="card-img-top" alt="London" style="height:200px; width:50%; margin-left: 25%">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align:center">QR</h5>
+                    <p class="card-text">Con nuestro lector QR online puedes decodificar códigos QR de forma directa desde el navegador. El proceso de decodificación se realiza en tu propia ventana del navegador por lo que los códigos QR no se cargan en el servidor.                         </p>
+                    <a href="#" class="btn btn-primary">Ir principal</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="{{ asset('public/assets/front-end/img/delivery.jpg') }}" class="card-img-top" alt="New York" style="height:200px; width:50%; margin-left: 25%">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align:center">Delivery</h5>
+                    <p class="card-text">El término delivery no forma parte del diccionario, pero su uso es muy frecuente en nuestro idioma. Se llama delivery al servicio de reparto que ofrece un comercio para entregar sus productos en el domicilio del comprador.</p>
+                    <a href="#" class="btn btn-primary">Ir Principal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   <CENTER> <h1>COMO LLEGAR LÁCTEOS LA VICTORIA</h1></CENTER>
 <div class="contact-form">
     <div class="map-responsive">
