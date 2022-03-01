@@ -441,7 +441,9 @@
                     </ul>
                     <!-- Primary menu-->
                     <ul class="navbar-nav">
-
+                        <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
+                            <a class="nav-link" href="{{route('inicio')}}">Inicio</a>
+                        </li>
                         <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
                             <a class="nav-link" href="{{route('home')}}">Productos</a>
                         </li>
@@ -466,7 +468,29 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
-                            <a class="nav-link"  href="{{ route('about-us') }}">Nosotros </a>
+
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                               data-toggle="dropdown">Sobre Nosotros</a>
+                            <ul class="dropdown-menu scroll-bar">
+                                    <li style="border-bottom: 1px solid #e3e9ef;">
+                                        <a class="dropdown-item"
+                                        href="{{ route('ubicame') }} ">
+                                        Ubicanos
+                                        </a>
+                                    </li>
+                                    <li style="border-bottom: 1px solid #e3e9ef;">
+                                        <a class="dropdown-item"
+                                        href="{{ route('about-us') }} ">
+                                           Nosotros
+
+                                        </a>
+
+                                    </li>
+
+                            </ul>
                         </li>
                         <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
                             <a class="nav-link"  href="{{ route('contacts') }}">Contacto </a>

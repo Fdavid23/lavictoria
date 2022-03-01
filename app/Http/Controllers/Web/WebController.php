@@ -630,7 +630,20 @@ class WebController extends Controller
             'about_us' => $about_us,
         ]);
     }
-
+    public function ubicame()
+    {
+        $ubicame = BusinessSetting::where('type', 'ubicame')->first();
+        return view('web-views.about-us1', [
+            'ubicame' => $ubicame,
+        ]);
+    }
+    public function inicio()
+    {
+        $inicio = BusinessSetting::where('type', 'inicio')->first();
+        return view('web-views.about-us2', [
+            'inicio' => $inicio,
+        ]);
+    }
     public function termsandCondition()
     {
         $terms_condition = BusinessSetting::where('type', 'terms_condition')->first();

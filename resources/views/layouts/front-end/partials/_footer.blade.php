@@ -436,7 +436,7 @@
                     <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=309073"></a><br><br><a href='http://boxindian.com/'></a></center>
 
                 <p class="text-center" style="font-size: 12px;">{{ $web_config['copyright_text']->value }}  </p>
-               <p style="font-size: 12px;"> Dirección Julio Cesar Cañar y Segundo Cueva</p>
+               <p style="font-size: 12px;"> Barrio Pilacoto/Parroquia Guaytacama</p>
 
             </div>
 
