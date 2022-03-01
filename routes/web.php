@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Web'], function () {
     // Route::get('/', 'WebController@home')->name('home');
-    Route::get('/', 'WebController@about_us')->name('about-us');
+    Route::get('/', 'WebController@inicio')->name('inicio');
     Route::get('ubicame', 'WebController@ubicame')->name('ubicame');
-    Route::get('inicio', 'WebController@inicio')->name('inicio');
+    Route::get('about-us', 'WebController@about_us')->name('about-us');
     Route::get('home', 'WebController@home')->name('home');
     Route::get('quick-view', 'WebController@quick_view')->name('quick-view');
     Route::get('searched-products', 'WebController@searched_products')->name('searched-products');

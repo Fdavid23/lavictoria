@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title',' Lácteos Victoria' )
+@section('title',' Productos' )
 
 @push('css_or_js')
     <meta property="og:image" content="{{asset('storage/app/public/company')}}/{{$web_config['web_logo']->value}}"/>
