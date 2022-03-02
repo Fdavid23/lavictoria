@@ -39,7 +39,7 @@
     <!-- Content -->
     <div class="container py-5 py-sm-7">
         @php($e_commerce_logo=\App\Model\BusinessSetting::where(['type'=>'company_web_logo'])->first()->value)
-        <a class="d-flex justify-content-center mb-5" href="index.html">
+        <a class="d-flex justify-content-center mb-5" href="{{ route('inicio') }}">
             <img class="z-index-2"  src="{{ asset('public/assets/front-end/img/logo27.png') }}" alt="Logo"
                  style="width: 8rem;">
         </a>

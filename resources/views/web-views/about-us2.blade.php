@@ -255,7 +255,7 @@
                 <img src="{{ asset('public/assets/front-end/img/Productos/mora.png') }}" class="card-img-top" alt="A Street in Europe" style="height:200px; width:50%; margin-left: 25%">
                 <div class="card-body">
                     <h5 class="card-title" style="text-align:center">Yogurt</h5>
-                    <p class="card-text">El yogur, —también conocido como yogurt, yoghourt, yogourt, yoghurt, yogurth o yagurt ​ - es un producto lácteo obtenido mediante la fermentación de la leche​ por medio de bacterias de los géneros Lactobacillus y Streptococcus.</p>
+                    <p class="card-text"  style="text-align: justify">El yogur, —también conocido como yogurt, yoghourt, yogourt, yoghurt, yogurth o yagurt ​ - es un producto lácteo obtenido mediante la fermentación de la leche​ por medio de bacterias de los géneros Lactobacillus y Streptococcus.</p>
                     <a href="#" class="btn btn-primary">Ir Principal</a>
                 </div>
             </div>
@@ -265,7 +265,7 @@
                 <img src="{{ asset('public/assets/front-end/img/qr.jpeg') }}" class="card-img-top" alt="London" style="height:200px; width:50%; margin-left: 25%">
                 <div class="card-body">
                     <h5 class="card-title" style="text-align:center">QR</h5>
-                    <p class="card-text">Con nuestro lector QR online puedes decodificar códigos QR de forma directa desde el navegador. El proceso de decodificación se realiza en tu propia ventana del navegador por lo que los códigos QR no se cargan en el servidor.                         </p>
+                    <p class="card-text" style="text-align: justify">Con nuestro lector QR online puedes decodificar códigos QR de forma directa desde el navegador. El proceso de decodificación se realiza en tu propia ventana del navegador por lo que los códigos QR no se cargan en el servidor.                         </p>
                     <a href="#" class="btn btn-primary">Ir principal</a>
                 </div>
             </div>
@@ -275,14 +275,14 @@
                 <img src="{{ asset('public/assets/front-end/img/delivery.jpg') }}" class="card-img-top" alt="New York" style="height:200px; width:50%; margin-left: 25%">
                 <div class="card-body">
                     <h5 class="card-title" style="text-align:center">Delivery</h5>
-                    <p class="card-text">El término delivery no forma parte del diccionario, pero su uso es muy frecuente en nuestro idioma. Se llama delivery al servicio de reparto que ofrece un comercio para entregar sus productos en el domicilio del comprador.</p>
+                    <p class="card-text" style="text-align: justify">El término delivery no forma parte del diccionario, pero su uso es muy frecuente en nuestro idioma. Se llama delivery al servicio de reparto que ofrece un comercio para entregar sus productos en el domicilio del comprador.</p>
                     <a href="#" class="btn btn-primary">Ir Principal</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-  <CENTER> <h1>COMO LLEGAR LÁCTEOS LA VICTORIA</h1></CENTER>
+  <CENTER> <h1>COMO LLEGAR LÁCTEOS LA VICTORIA GUAYTACAMA</h1></CENTER>
 <div class="contact-form">
     <div class="map-responsive">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.420363196008!2d-78.64376498572749!3d-0.8092502355188957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4599ad3e87b29%3A0x8a68e9cb17330b16!2sLacteos%20%22La%20Victoria%22!5e0!3m2!1ses-419!2sec!4v1645675525789!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    </div>
