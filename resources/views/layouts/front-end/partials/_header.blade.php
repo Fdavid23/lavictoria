@@ -487,12 +487,12 @@
                                         </a>
 
                                     </li>
-
+                                    <li style="border-bottom: 1px solid #e3e9ef;" class="nav-item dropdown <?php echo e(request()->is('/')?'active':''); ?>">
+                                        <a class="dropdown-item" class="nav-link"  href="<?php echo e(route('contacts')); ?>">Contactanos </a>
+                                    </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown {{request()->is('/')?'active':''}}">
-                            <a class="nav-link"  href="{{ route('contacts') }}">Contacto </a>
-                        </li>
+
 
                     </ul>
                 </div>

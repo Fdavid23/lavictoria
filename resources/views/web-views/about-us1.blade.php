@@ -36,10 +36,11 @@
 @endpush
 
 @section('content')
-<CENTER> <h1>COMO LLEGAR LÁCTEOS LA VICTORIA</h1></CENTER>
-<div class="contact-form">
-    <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.420363196008!2d-78.64376498572749!3d-0.8092502355188957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4599ad3e87b29%3A0x8a68e9cb17330b16!2sLacteos%20%22La%20Victoria%22!5e0!3m2!1ses-419!2sec!4v1645675525789!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    </div>
+<CENTER> <h1 style="margin-top:2%">COMO LLEGAR LÁCTEOS LA VICTORIA</h1></CENTER>
+<div class="container-fluid mt-5" >
 
-
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4804.964769638651!2d-78.6426369!3d-0.8102311!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4599ad3e87b29%3A0x8a68e9cb17330b16!2sLacteos%20%22La%20Victoria%22!5e1!3m2!1ses!2sec!4v1644187608597!5m2!1ses!2sec" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<br/><br/>
+<br/>
 @endsection
