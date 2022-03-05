@@ -285,10 +285,10 @@ class UserProfileController extends Controller
             if ($orderDetails != null && $customer->phone == $request->phone_number) {
                 return view('web-views.order-tracking', compact('orderDetails'));
             } else {
-                return redirect()->route('track-order.index')->with('Error', 'Invalid Order Id or Phone Number');
+                return redirect()->route('track-order.index')->with('Error', 'ID de pedido o número de teléfono no válido');
             }
         } else {
-            return redirect()->route('track-order.index')->with('Error', 'Invalid Order Id or Phone Number');
+            return redirect()->route('track-order.index')->with('Error', 'ID de pedido o número de teléfono no válido');
         }
 
     }
@@ -300,7 +300,7 @@ class UserProfileController extends Controller
         if ($orderDetails != null) {
             return view('web-views.order-tracking', compact('orderDetails'));
         } else {
-            return redirect()->route('track-order.index')->with('Error', 'Invalid Order Id or Phone Number');
+            return redirect()->route('track-order.index')->with('Error', 'ID de pedido o número de teléfono no válido');
         }
 
     }
@@ -317,6 +317,20 @@ class UserProfileController extends Controller
 //        return view('web-views.invoice', compact('order'));
 
         $pdf = PDF::loadView('web-views.invoice', $data);
+        return $pdf->download('00' . $order->id . '.pdf');
+    }
+    public function consumidor_final($id)
+    {
+        $order = Order::with('shipping')->where('id', $id)->first();
+//        dd($order)->toArray();
+
+        $data["email"] = $order->customer["email"];
+        $data["client_name"] = $order->customer["f_name"] . ' ' . $order->customer["l_name"];
+        $data["order"] = $order;
+
+//        return view('web-views.invoice', compact('order'));
+
+        $pdf = PDF::loadView('web-views.invoiceC', $data);
         return $pdf->download('00' . $order->id . '.pdf');
     }
 }

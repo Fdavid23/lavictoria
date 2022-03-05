@@ -64,6 +64,7 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('account-oder', 'UserProfileController@account_oder')->name('account-oder');
     Route::get('account-order-details', 'UserProfileController@account_order_details')->name('account-order-details');
     Route::get('generate-invoice/{id}', 'UserProfileController@generate_invoice')->name('generate-invoice');
+    Route::get('consumidor-final/{id}', 'UserProfileController@consumidor_final')->name('consumidor-final');
     Route::get('account-wishlist', 'UserProfileController@account_wishlist')->name('account-wishlist'); //add to card not work
 
     Route::get('account-tickets', 'UserProfileController@account_tickets')->name('account-tickets');

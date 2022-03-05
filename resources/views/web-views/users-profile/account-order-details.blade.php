@@ -427,13 +427,17 @@
                     </div>
                 </div>
                 <div class="justify-content mt-4 for-mobile-glaxy ">
+                    <a href="{{route('consumidor-final',[$order->id])}}" class="btn btn-primary for-glaxy-mobile"
+                        style="width:49%;">
+                         Consumidor Final
+                     </a>
                     <a href="{{route('generate-invoice',[$order->id])}}" class="btn btn-primary for-glaxy-mobile"
                        style="width:49%;">
                         {{trans('messages.generate_invoice')}}
                     </a>
 
                     <a id="track_order" class="btn btn-secondary" type="button"
-                    style="width:50%; color: white">
+                    style="width:49%; color: white; margin-top:2%">
                      Seguir {{trans('messages.Order')}}
                  </a>
                 </div>

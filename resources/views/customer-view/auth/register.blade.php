@@ -55,6 +55,16 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
+                                        <label for="reg-phone"> Número de Cedula</label>
+                                        <input class="form-control" type="text" name="cedula" required>
+                                        <div class="invalid-feedback">Por favor, introduzca su número de Cedula!</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
                                         <label for="si-password">{{trans('messages.password')}}</label>
                                         <div class="password-toggle">
                                             <input class="form-control" name="password" type="password" id="si-password"
@@ -175,7 +185,7 @@
                     $('#loading').hide();
                 },
                 error: function () {
-                    toastr.error('password does not match!', {
+                    toastr.error('¡las contraseñas no coinciden!', {
                         CloseButton: true,
                         ProgressBar: true
                     });

@@ -26,6 +26,7 @@ class RegisterController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|unique:users',
             'phone' => 'unique:users',
+            'cedula' => 'unique:users',
             'password' => 'required|min:6'
         ]);
 
@@ -34,7 +35,7 @@ class RegisterController extends Controller
         }
 
         if ($request['password'] != $request['con_password']) {
-            return response()->json(['errors' => ['code' => '', 'message' => 'password does not match.']],403);
+            return response()->json(['errors' => ['code' => '', 'message' => 'Las contraseñas no coinciden.']],403);
         }
 
         if (session()->has('keep_return_url')==false){
@@ -46,11 +47,12 @@ class RegisterController extends Controller
             'l_name' => $request['l_name'],
             'email' => $request['email'],
             'phone' => $request['phone'],
+            'cedula' => $request['cedula'],
             'password' => bcrypt($request['password'])
         ]);
 
         if (auth('customer')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-            return response()->json(['message' => 'Sign up process done successfully!', 'url' => session('keep_return_url')]);
+            return response()->json(['message' => '¡Proceso de registro realizado con éxito!', 'url' => session('keep_return_url')]);
         }
 
         return redirect()->back()->withInput($request->only('email', 'remember'))

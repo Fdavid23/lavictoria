@@ -106,15 +106,15 @@
             padding: 20px;
         }
         @media (max-width:350px){
-            
+
         .photoHeader {
             border: none!important;
             margin-left:  0.1px !important;
             margin-right:  0.1px !important;
             padding:  0.1px !important;
-            
+
         }
-        
+
         }
 
         @media (max-width: 600px) {
@@ -214,6 +214,12 @@
                                             <input type="text" class="form-control" type="text" id="phone"
                                                    name="phone"
                                                    value="{{$customerDetail['phone']}}" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="phone">Nùmero de cédula </label>
+                                            <input type="text" class="form-control" type="text" id="cedula"
+                                                   name="cedula"
+                                                   value="{{$customerDetail['cedula']}}" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
