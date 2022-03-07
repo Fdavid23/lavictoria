@@ -34,10 +34,10 @@ class ReviewController extends Controller
             $review->rating = $request->rating;
             $review->attachment = json_encode($image_array);
             $review->save();
-            Toastr::success('Your review added successfully!');
+            Toastr::success('¡Tu reseña se agregó con éxito!');
             return redirect()->back();
         } else {
-            Toastr::error('Login first!');
+            Toastr::error('¡Inicie sesión primero!');
             return redirect()->back();
         }
     }

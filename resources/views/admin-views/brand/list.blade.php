@@ -1,5 +1,5 @@
 @extends('layouts.back-end.app')
-@section('title','Brand List')
+@section('title','Lista de Marcas')
 
 @push('css_or_js')
     <!-- Custom styles for this page -->
@@ -11,7 +11,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{trans('messages.Dashboard')}}</a></li>
-            <li class="breadcrumb-item" aria-current="page">{{trans('messages.Dashboard')}}</li>
+            <li class="breadcrumb-item" aria-current="page">Lista de Marcas</li>
         </ol>
     </nav>
     <!-- Page Heading -->
@@ -35,7 +35,7 @@
                                }'>
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">{{ trans('messages.sl')}}</th>
+                                <th scope="col">ID</th>
                                 <th scope="col">{{ trans('messages.name')}}</th>
                                 <th scope="col">{{ trans('messages.image')}}</th>
                                 <th scope="col" style="width: 50px">{{ trans('messages.action')}}</th>
@@ -94,12 +94,12 @@
         $(document).on('click', '.delete', function () {
             var id = $(this).attr("id");
             Swal.fire({
-                title: 'Are you sure delete this brand?',
-                text: "You won't be able to revert this!",
+                title: '¿Estás seguro de eliminar esta marca?',
+                text: "¡No podrás revertir esto!",
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonColor: '#258934',
+                cancelButtonColor: 'dark',
+                confirmButtonText: '¡Sí, bórralo!'
             }).then((result) => {
                 if (result.value) {
                     $.ajaxSetup({
@@ -112,7 +112,7 @@
                         method: 'POST',
                         data: {id: id},
                         success: function () {
-                            toastr.success('Brand deleted successfully');
+                            toastr.success('Marca eliminada correctamente');
                             location.reload();
                         }
                     });

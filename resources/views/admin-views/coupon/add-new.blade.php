@@ -1,5 +1,5 @@
 @extends('layouts.back-end.app')
-@section('title','Coupon Add')
+@section('title','Cupón Agregar')
 @push('css_or_js')
     <link href="{{asset('public/assets/back-end')}}/css/select2.min.css" rel="stylesheet"/>
     <!-- Custom styles for this page -->
@@ -284,9 +284,9 @@
                 },
                 success: function (data) {
                     if (data == 1) {
-                        toastr.success('Coupon published successfully');
+                        toastr.success('Cupón publicado con éxito');
                     } else {
-                        toastr.success('Coupon unpublished successfully');
+                        toastr.success('Cupón sin publicar con éxito');
                     }
                 }
             });

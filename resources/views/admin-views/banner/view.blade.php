@@ -402,9 +402,9 @@
                 },
                 success: function (data) {
                     if (data == 1) {
-                        toastr.success('Banner published successfully');
+                        toastr.success('Banner publicado con éxito');
                     } else {
-                        toastr.success('Banner unpublished successfully');
+                        toastr.success('Banner sin publicar con éxito');
                     }
                 }
             });
@@ -413,12 +413,12 @@
         $(document).on('click', '.delete', function () {
             var id = $(this).attr("id");
             Swal.fire({
-                title: 'Are you sure delete this banner?',
-                text: "You won't be able to revert this!",
+                title: '¿Estás seguro de eliminar este banner?',
+                text: "¡No podrás revertir esto!",
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: '¡Sí, bórralo!'
             }).then((result) => {
                 if (result.value) {
                     $.ajaxSetup({
@@ -431,7 +431,7 @@
                         method: 'POST',
                         data: {id: id},
                         success: function () {
-                            toastr.success('Banner deleted successfully');
+                            toastr.success('Banner eliminado con éxito');
                             location.reload();
                         }
                     });
@@ -533,7 +533,7 @@
                             }
                         },
                     });
-                    toastr.success('Main Banner updated Successfully.');
+                    toastr.success('Banner principal actualizado con éxito.');
 
 
                     location.reload();
@@ -584,7 +584,7 @@
                             }
                         },
                     });
-                    toastr.success('Secondary Banner updated Successfully.');
+                    toastr.success('Banner secundario actualizado con éxito.');
 
 
                     location.reload();
@@ -635,7 +635,7 @@
                             }
                         },
                     });
-                    toastr.success('Popup Banner updated Successfully.');
+                    toastr.success('Banner emergente actualizado con éxito.');
 
 
                     location.reload();

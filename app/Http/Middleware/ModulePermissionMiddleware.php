@@ -21,7 +21,7 @@ class ModulePermissionMiddleware
             return $next($request);
         }
 
-        Toastr::error('Access Denied !');
+        Toastr::error('Acceso denegado !');
         return redirect()->route('admin.dashboard');
     }
 }

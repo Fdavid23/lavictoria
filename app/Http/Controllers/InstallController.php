@@ -29,7 +29,7 @@ class InstallController extends Controller
     public function step3($error = "")
     {
         if (session()->has('purchase_code') == false && $error == "") {
-            session()->flash('error', 'Purchase code is required!');
+            session()->flash('error', '¡Se requiere código de compra!');
             return redirect('step2');
         }
 
@@ -43,7 +43,7 @@ class InstallController extends Controller
     public function step4()
     {
         if (env('PURCHASE_CODE') == null) {
-            session()->flash('error', 'Purchase code is required!');
+            session()->flash('error', '¡Se requiere código de compra!');
             return redirect('step2');
         }
 
@@ -53,7 +53,7 @@ class InstallController extends Controller
     public function step5()
     {
         if (env('PURCHASE_CODE') == null) {
-            session()->flash('error', 'Purchase code is required!');
+            session()->flash('error', '¡Se requiere código de compra!');
             return redirect('step2');
         }
 
@@ -74,7 +74,7 @@ class InstallController extends Controller
 
         } catch (\Exception $ex) {
             session()->forget('purchase_code');
-            session()->flash('error', 'Purchase code is invalid!');
+            session()->flash('error', '¡El código de compra no es válido!');
             return back();
         }
 

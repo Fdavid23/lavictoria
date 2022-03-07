@@ -183,7 +183,7 @@
                                            class="spandHeadO">
                                         {{trans('messages.change_your_profile')}}
                                     </label>
-                                    <span style="color: red;font-size: 10px">( * Image ratio should be 1:1 )</span>
+                                    <span style="color: red;font-size: 10px">( * La relación de imagen debe ser 1:1 )</span>
                                     <input id="files" name="image" style="visibility:hidden;" type="file">
                                 </div>
 

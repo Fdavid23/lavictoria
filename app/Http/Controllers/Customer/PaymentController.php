@@ -31,17 +31,17 @@ class PaymentController extends Controller
             return view('web-views.mobile-app-view.payment-view');
         }
 
-        return response()->json(['errors' => ['code'=>'order-payment','message'=>'Data not found']], 403);
+        return response()->json(['errors' => ['code'=>'order-payment','message'=>'Datos no encontrados']], 403);
 
     }
 
     public function success()
     {
-        return response()->json(['message' => 'Payment succeeded'], 200);
+        return response()->json(['message' => 'Pago exitoso'], 200);
     }
 
     public function fail()
     {
-        return response()->json(['message' => 'Payment failed'], 403);
+        return response()->json(['message' => 'Pago fallido'], 403);
     }
 }

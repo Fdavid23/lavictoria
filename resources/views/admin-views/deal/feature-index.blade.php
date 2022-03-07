@@ -1,5 +1,5 @@
 @extends('layouts.back-end.app')
-@section('title','Feature Deal')
+@section('title','Oferta de funciones')
 @push('css_or_js')
     <link href="{{asset('public/assets/back-end/css/croppie.css')}}" rel="stylesheet">
     <link href="{{asset('public/assets/back-end/css/tags-input.min.css')}}" rel="stylesheet">
@@ -46,11 +46,11 @@
         }
 
         input:checked + .slider {
-            background-color: #377dff;
+            background-color: #258934;
         }
 
         input:focus + .slider {
-            box-shadow: 0 0 1px #377dff;
+            box-shadow: 0 0 1px #258934;
         }
 
         input:checked + .slider:before {
@@ -119,7 +119,7 @@
 
                         <div class="card-footer">
                             <button type="submit"
-                                    class="btn btn-primary ">{{ trans('messages.save')}}</button>
+                                    class="btn btn-success " style="background: #258934">{{ trans('messages.save')}}</button>
                         </div>
                     </form>
                 </div>
@@ -159,8 +159,8 @@
                                     <td>{{$deal['end_date']}}</td>
                                     <td>
                                         <a href="{{route('admin.deal.add-product',[$deal['id']])}}"
-                                           class="btn btn-primary btn-sm">
-                                            Add Product
+                                           class="btn btn-success btn-sm" style="background: #258934">
+                                           Añadir Producto
                                         </a>
                                     </td>
                                     <td>
@@ -172,7 +172,7 @@
                                     </td>
                                     <td>
                                         <a href="{{route('admin.deal.edit',[$deal['id']])}}"
-                                           class="btn btn-primary btn-sm">
+                                           class="btn btn-success btn-sm" style="background: #258934">
                                            {{ trans ('Edit')}}
                                         </a>
                                     </td>
@@ -232,7 +232,7 @@
                     featured: featured
                 },
                 success: function () {
-                    toastr.success('Status updated successfully');
+                    toastr.success('Estado actualizado con éxito');
                     // location.reload();
                 }
             });
@@ -257,7 +257,7 @@
                     status: status
                 },
                 success: function () {
-                    toastr.success('Status updated successfully');
+                    toastr.success('Estado actualizado con éxito');
                     location.reload();
                 }
             });

@@ -52,7 +52,7 @@ class UserProfileController extends Controller
         ]);
 
         if ($request['password'] != $request['con_password']) {
-            Toastr::error('Password did not match.');
+            Toastr::error('La contraseña no coincidió.');
             return back();
         }
 
@@ -228,7 +228,7 @@ class UserProfileController extends Controller
             'status'     => 'close',
             'updated_at' => now(),
         ]);
-        Toastr::success('Ticket closed!');
+        Toastr::success('Boleto cerrado!');
         return redirect('/account-tickets');
     }
 

@@ -46,7 +46,7 @@ class CartManager
             } else {
                 return response()->json([
                     'success' => 0,
-                    'messages' => ['0' => 'Out of stock!']
+                    'messages' => ['0' => '¡Agotado!']
                 ]);
             }
         } else {

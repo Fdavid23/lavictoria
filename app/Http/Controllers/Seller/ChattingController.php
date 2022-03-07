@@ -66,8 +66,8 @@ class ChattingController extends Controller
     public function seller_message_store(Request $request)
     {
         if ($request->message == '') {
-            Toastr::warning('Type Something!');
-            return response()->json('type something!');
+            Toastr::warning('¡Escribe algo!');
+            return response()->json('¡Escribe algo!');
         } else {
             $shop_id = Shop::where('seller_id', auth('seller')->id())->first()->id;
 

@@ -16,7 +16,7 @@ class ForgotPasswordController extends Controller
     {
         $this->middleware('guest:customer', ['except' => ['logout']]);
     }
-    
+
     public function reset_password()
     {
         return view('customer-view.auth.recover-password');
@@ -40,11 +40,11 @@ class ForgotPasswordController extends Controller
             $reset_url = url('/') . '/customer/auth/reset-password?token=' . $token;
             Mail::to($customer['email'])->send(new \App\Mail\PasswordResetMail($reset_url));
 
-            Toastr::success('Check your email. Password reset url sent.');
+            Toastr::success('Consultar su correo electrónico. URL de restablecimiento de contraseña enviada.');
             return back();
         }
 
-        Toastr::error('No such email found!');
+        Toastr::error('¡No se encontró tal correo electrónico!');
         return back();
     }
 
@@ -67,14 +67,14 @@ class ForgotPasswordController extends Controller
                 DB::table('users')->where(['email' => $data->email])->update([
                     'password' => bcrypt($request['confirm_password'])
                 ]);
-                Toastr::success('Password reset successfully.');
+                Toastr::success('Restablecimiento de contraseña con éxito.');
                 DB::table('password_resets')->where(['token' => $request['reset_token']])->delete();
                 return redirect('/');
             }
-            Toastr::error('Password did not match.');
+            Toastr::error('La contraseña no coincidió.');
             return back();
         }
-        Toastr::error('Invalid URL.');
+        Toastr::error('URL invalida.');
         return redirect('/');
     }
 }

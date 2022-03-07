@@ -186,7 +186,7 @@ class PaypalPaymentController extends Controller
                 Session::put('error', 'Connection timeout');
                 return Redirect::route('home');
             } else {
-                Session::put('error', 'Some error occur, sorry for inconvenient');
+                Session::put('error', 'Ocurrió algún error, disculpe las molestias');
                 return Redirect::route('home');
             }
         }
@@ -254,7 +254,7 @@ class PaypalPaymentController extends Controller
             Toastr::success('Payment success.');
             return redirect('/account-oder');
         }
-        return response()->json(['message' => 'Payment succeeded'], 200);
+        return response()->json(['message' => 'Pago exitoso'], 200);
     }
 
     public function fail()

@@ -34,14 +34,14 @@ class SellerController extends Controller
         $order->status = $request->status;
         if ($request->status == "approved") {
             $order->save();
-            Toastr::success('Seller has been approved successfully');
+            Toastr::success('El vendedor ha sido aprobado con éxito');
             return redirect()->route('admin.sellers.seller-list');
         } else if ($request->status == "suspended") {
             $order->save();
-            Toastr::info('Seller verification request has been rejected successfully');
+            Toastr::info('La solicitud de verificación del vendedor ha sido rechazada con éxito');
             return redirect()->route('admin.sellers.seller-list');
         } else {
-            Toastr::error('Something went wrong');
+            Toastr::error('Algo salió mal');
             return back();
         }
     }
@@ -92,14 +92,14 @@ class SellerController extends Controller
         $withdraw->approved = $request->approved;
         if ($request->approved == 1) {
             $withdraw->save();
-            Toastr::success('Seller Payment has been approved successfully');
+            Toastr::success('El pago del vendedor ha sido aprobado con éxito');
             return redirect()->route('admin.sellers.withdraw_list');
         } else if ($request->approved == 2) {
             $withdraw->save();
-            Toastr::info('Seller Payment request has been Denied successfully');
+            Toastr::info('La solicitud de pago del vendedor se ha denegado correctamente');
             return redirect()->route('admin.sellers.withdraw_list');
         } else {
-            Toastr::error('Something went wrong');
+            Toastr::error('Algo salió mal');
             return back();
         }
     }

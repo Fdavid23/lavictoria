@@ -26,7 +26,7 @@ class SslCommerzNotification extends AbstractSslCommerz
     public function orderValidate($trx_id = '', $amount = 0, $currency = "BDT", $post_data)
     {
         if ($post_data == '' && $trx_id == '' && !is_array($post_data)) {
-            $this->error = "Please provide valid transaction ID and post request data";
+            $this->error = "Proporcione un ID de transacción válido y los datos de la solicitud posterior";
             return $this->error;
         }
 
@@ -115,7 +115,7 @@ class SslCommerzNotification extends AbstractSslCommerz
                                 return true;
                             } else {
                                 # DATA TEMPERED
-                                $this->error = "Data has been tempered";
+                                $this->error = "Los datos han sido templados";
                                 return false;
                             }
                         } else {
@@ -124,28 +124,28 @@ class SslCommerzNotification extends AbstractSslCommerz
                                 return true;
                             } else {
                                 # DATA TEMPERED
-                                $this->error = "Data has been tempered";
+                                $this->error = "Los datos han sido templados";
                                 return false;
                             }
                         }
                     } else {
                         # FAILED TRANSACTION
-                        $this->error = "Failed Transaction";
+                        $this->error = "Transacción fallida";
                         return false;
                     }
                 } else {
                     # Failed to connect with SSLCOMMERZ
-                    $this->error = "Faile to connect with SSLCOMMERZ";
+                    $this->error = "Error al conectar con SSLCOMMERZ";
                     return false;
                 }
             } else {
                 # Hash validation failed
-                $this->error = "Hash validation failed";
+                $this->error = "La validación de hash falló";
                 return false;
             }
         } else {
             # INVALID DATA
-            $this->error = "Invalid data";
+            $this->error = "Datos inválidos";
             return false;
         }
     }
@@ -182,11 +182,11 @@ class SslCommerzNotification extends AbstractSslCommerz
                 return true;
 
             } else {
-                $this->error = "Verification signature not matched";
+                $this->error = "La firma de verificación no coincide";
                 return false;
             }
         } else {
-            $this->error = 'Required data mission. ex: verify_key, verify_sign';
+            $this->error = 'Misión de datos requerida. ej: verificar_clave, verificar_firmar';
             return false;
         }
     }
@@ -200,7 +200,7 @@ class SslCommerzNotification extends AbstractSslCommerz
     public function makePayment(array $requestData, $type = 'checkout', $pattern = 'json')
     {
         if (empty($requestData)) {
-            return "Please provide a valid information list about transaction with transaction id, amount, success url, fail url, cancel url, store id and pass at least";
+            return "Proporcione una lista de información válida sobre la transacción con la identificación de la transacción, el monto, la URL correcta, la URL fallida, la URL cancelada, la ID de la tienda y la aprobación al menos";
         }
 
         $header = [];
@@ -222,7 +222,7 @@ class SslCommerzNotification extends AbstractSslCommerz
             if (isset($formattedResponse['GatewayPageURL']) && $formattedResponse['GatewayPageURL'] != '') {
                 $this->redirect($formattedResponse['GatewayPageURL']);
             } else {
-                $errorMessage = "No redirect URL found!";
+                $errorMessage = "¡No se ha encontrado ninguna URL de redireccionamiento!";
                 return $errorMessage;
             }
         } else {

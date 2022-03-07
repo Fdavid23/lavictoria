@@ -176,7 +176,7 @@
                                                 <a class="dropdown-item"
                                                    href="{{route('seller.business-settings.shipping-method.edit',[$method['id']])}}">{{trans('messages.Edit')}}</a>
                                                 <a class="dropdown-item" href="javascript:"
-                                                   onclick="form_alert('product-{{$method['id']}}','Want to delete this item ?')">{{trans('messages.Delete')}}</a>
+                                                   onclick="form_alert('product-{{$method['id']}}','¿Quieres eliminar este artículo?')">{{trans('messages.Delete')}}</a>
                                                 <form
                                                     action="{{route('seller.business-settings.shipping-method.delete',[$method['id']])}}"
                                                     method="post" id="product-{{$method['id']}}">

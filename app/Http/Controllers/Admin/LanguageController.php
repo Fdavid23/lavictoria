@@ -119,7 +119,7 @@ class LanguageController extends Controller
         }
         rmdir($dir);
 
-        Toastr::success('Removed Successfully!');
+        Toastr::success('Eliminado con éxito!');
         return back();
     }
 }

@@ -229,9 +229,9 @@ class SslCommerzPaymentController extends Controller
                 ->update(['order_status' => 'failed']);
             Toastr::warning('Transaction is Falied');
         } else if ($order_detials->order_status == 'processing' || $order_detials->order_status == 'complete') {
-            Toastr::warning('Transaction is already Successful');
+            Toastr::warning('La transacción ya es exitosa');
         } else {
-            Toastr::warning('Transaction is Invalid');
+            Toastr::warning('La transacción no es válida');
         }
 
         return view('web-views.payment-failed');
@@ -251,9 +251,9 @@ class SslCommerzPaymentController extends Controller
                 ->update(['order_status' => 'canceled']);
             Toastr::warning('Transaction is Cancel');
         } else if ($order_detials->order_status == 'processing' || $order_detials->order_status == 'complete') {
-            Toastr::warning('Transaction is already Successful');
+            Toastr::warning('La transacción ya es exitosa');
         } else {
-            Toastr::warning('Transaction is Invalid');
+            Toastr::warning('La transacción no es válida');
         }
 
         session()->forget('cart');
@@ -289,7 +289,7 @@ class SslCommerzPaymentController extends Controller
                         ->where('transaction_ref', $tran_id)
                         ->update(['order_status' => 'processing', 'payment_status' => 'paid']);
 
-                    echo "Transaction is successfully completed";
+                    echo "La transacción se completó con éxito";
                 } else {
                     /*
                     That means IPN worked, but Transation validation failed.
@@ -299,21 +299,21 @@ class SslCommerzPaymentController extends Controller
                         ->where('transaction_ref', $tran_id)
                         ->update(['order_status' => 'processing', 'payment_status' => 'unpaid']);
 
-                    echo "validation Fail";
+                    echo "validación fallida";
                 }
 
             } else if ($order_details->order_status == 'processing' || $order_details->order_status == 'complete') {
 
                 #That means Order status already updated. No need to udate database.
 
-                echo "Transaction is already successfully completed";
+                echo "La transacción ya se completó con éxito";
             } else {
                 #That means something wrong happened. You can redirect customer to your product page.
 
-                echo "Invalid Transaction";
+                echo "Transacción inválida";
             }
         } else {
-            echo "Invalid Data";
+            echo "Datos inválidos";
         }
     }
 

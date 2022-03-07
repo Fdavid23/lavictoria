@@ -35,10 +35,10 @@ class ForgotPassword extends Controller
             ]);
             $reset_url = url('/') . '/customer/auth/reset-password?token=' . $token;
             Mail::to($customer['email'])->send(new \App\Mail\PasswordResetMail($reset_url));
-            return response()->json(['message' => 'Email sent successfully.'], 200);
+            return response()->json(['message' => 'Correo electrónico enviado con éxito.'], 200);
         }
         return response()->json(['errors' => [
-            ['code' => 'not-found', 'message' => 'Email not found!']
+            ['code' => 'not-found', 'message' => '¡El correo electrónico no encontrado!']
         ]], 404);
     }
 
@@ -50,16 +50,16 @@ class ForgotPassword extends Controller
                 DB::table('users')->where(['email' => $data->email])->update([
                     'password' => bcrypt($request['confirm_password'])
                 ]);
-                Toastr::success('Password reset successfully.');
+                Toastr::success('Restablecimiento de contraseña con éxito.');
                 DB::table('password_resets')->where(['token' => $request['reset_token']])->delete();
-                return response()->json(['message' => 'Password changed successfully.'], 200);
+                return response()->json(['message' => 'Contraseña cambiada con éxito.'], 200);
             }
             return response()->json(['errors' => [
-                ['code' => 'mismatch', 'message' => 'Password did,t match!']
+                ['code' => 'mismatch', 'message' => '¡La contraseña no coincide!']
             ]], 401);
         }
         return response()->json(['errors' => [
-            ['code' => 'invalid', 'message' => 'Invalid token.']
+            ['code' => 'invalid', 'message' => 'Simbolo no valido.']
         ]], 400);
     }
 }

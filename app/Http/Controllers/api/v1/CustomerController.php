@@ -48,11 +48,11 @@ class CustomerController extends Controller
             return response()->json([
                 'errors' => [
                     'code'    => 'failed',
-                    'message' => 'Something went wrong',
+                    'message' => 'Algo salió mal',
                 ],
             ], 422);
         }
-        return response()->json(['message' => 'Support ticket created successfully.'], 200);
+        return response()->json(['message' => 'Ticket de soporte creado con éxito.'], 200);
     }
 
     public function get_support_tickets(Request $request)
@@ -82,10 +82,10 @@ class CustomerController extends Controller
             $wishlist->customer_id = $request->user()->id;
             $wishlist->product_id = $request->product_id;
             $wishlist->save();
-            return response()->json(['message' => 'successfully added!'], 200);
+            return response()->json(['message' => '¡Agregado exitosamente!'], 200);
         }
 
-        return response()->json(['message' => 'Already in your wishlist'], 409);
+        return response()->json(['message' => 'Ya en tu lista de deseos'], 409);
     }
 
     public function remove_from_wishlist(Request $request)
@@ -102,10 +102,10 @@ class CustomerController extends Controller
 
         if (!empty($wishlist)) {
             Wishlist::where(['customer_id' => $request->user()->id, 'product_id' => $request->product_id])->delete();
-            return response()->json(['message' => 'successfully removed!'], 200);
+            return response()->json(['message' => 'eliminado con éxito!'], 200);
 
         }
-        return response()->json(['message' => 'No such data found!'], 404);
+        return response()->json(['message' => '¡No se encontraron tales datos!'], 404);
     }
 
     public function wish_list(Request $request)
@@ -145,7 +145,7 @@ class CustomerController extends Controller
             'updated_at'          => now(),
         ];
         DB::table('shipping_addresses')->insert($address);
-        return response()->json(['message' => 'successfully added!'], 200);
+        return response()->json(['message' => '¡Agregado exitosamente!'], 200);
     }
 
     public function delete_address(Request $request)
@@ -162,7 +162,7 @@ class CustomerController extends Controller
             DB::table('shipping_addresses')->where(['id' => $request['address_id'], 'customer_id' => $request->user()->id])->delete();
             return response()->json(['message' => 'successfully removed!'], 200);
         }
-        return response()->json(['message' => 'No such data found!'], 404);
+        return response()->json(['message' => '¡No se encontraron tales datos!'], 404);
     }
 
     public function get_order_list(Request $request)
@@ -196,8 +196,8 @@ class CustomerController extends Controller
             'l_name' => 'required',
             'phone'  => 'required',
         ], [
-            'f_name.required' => 'First name is required!',
-            'l_name.required' => 'Last name is required!',
+            'f_name.required' => '¡Se requiere el primer nombre!',
+            'l_name.required' => '¡Se requiere el apellido!',
         ]);
 
         if ($validator->fails()) {
@@ -235,7 +235,7 @@ class CustomerController extends Controller
 
         User::where(['id' => $request->user()->id])->update($userDetails);
 
-        return response()->json(['message' => 'successfully updated!'], 200);
+        return response()->json(['message' => '¡actualizado exitosamente!'], 200);
     }
     public function update_cm_firebase_token(Request $request)
     {
@@ -251,6 +251,6 @@ class CustomerController extends Controller
             'cm_firebase_token' => $request['cm_firebase_token'],
         ]);
 
-        return response()->json(['message' => 'successfully updated!'], 200);
+        return response()->json(['message' => '¡actualizado exitosamente!'], 200);
     }
 }

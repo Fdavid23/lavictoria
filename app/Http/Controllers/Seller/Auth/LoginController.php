@@ -29,7 +29,7 @@ class LoginController extends Controller
         $se = Seller::where(['email' => $request['email']])->first(['status']);
 
         if (isset($se) && $se['status'] == 'approved' && auth('seller')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-            Toastr::info('Welcome to your dashboard!');
+            Toastr::info('¡Bienvenido a tu tablero!');
             return redirect()->route('seller.dashboard');
         }elseif (isset($se) && $se['status'] == 'pending'){
             return redirect()->back()->withInput($request->only('email', 'remember'))

@@ -19,8 +19,8 @@ class PassportAuthController extends Controller
             'phone' => 'required|unique:users',
             'password' => 'required|min:6',
         ], [
-            'f_name.required' => 'The first name field is required.',
-            'l_name.required' => 'The last name field is required.',
+            'f_name.required' => 'El campo de nombre es obligatorio.',
+            'l_name.required' => 'El campo de apellido es obligatorio.',
         ]);
 
         if ($validator->fails()) {

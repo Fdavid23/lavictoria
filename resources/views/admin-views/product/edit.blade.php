@@ -1,5 +1,5 @@
 @extends('layouts.back-end.app')
-@section('title','Product Edit')
+@section('title','Producto Editar')
 @push('css_or_js')
     {{--    <link href="{{asset('public/assets/back-end')}}/css/select2.min.css" rel="stylesheet"/>--}}
     <link href="{{asset('public/assets/back-end/css/croppie.css')}}" rel="stylesheet">
@@ -397,7 +397,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card-header">
-                Thumbnail
+                Miniatura
             </div>
             <div class="card">
                 <div class="card-body">
@@ -410,7 +410,7 @@
         </div>
     </div>
     <hr>
-    <h4>Product Images</h4>
+    <h4>Imágenes del producto</h4>
     <div class="row">
         @foreach (json_decode($product->images) as $key => $photo)
             <div class="col-lg-2 col-md-4">
@@ -420,7 +420,7 @@
                              onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
                              src="{{asset("storage/app/public/product/$photo")}}" alt="Product image">
                         <a href="{{route('admin.product.remove-image',['id'=>$product['id'],'name'=>$photo])}}"
-                           class="btn btn-danger btn-block">Remove</a>
+                           class="btn btn-danger btn-block">Eliminar</a>
 
                     </div>
                 </div>
@@ -589,7 +589,7 @@
                             });
                         }
                     } else {
-                        toastr.success('product updated successfully!', {
+                        toastr.success('Producto actualizado con éxito!', {
                             CloseButton: true,
                             ProgressBar: true
                         });

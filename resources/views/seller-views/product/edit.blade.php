@@ -620,7 +620,7 @@
                             });
                         }
                     } else {
-                        toastr.success('product updated successfully!', {
+                        toastr.success('Producto actualizado con éxito!', {
                             CloseButton: true,
                             ProgressBar: true
                         });

@@ -33,14 +33,14 @@ class CouponController extends Controller
                     'status' => 1,
                     'discount' => Helpers::currency_converter($discount),
                     'total' => Helpers::currency_converter($total - $discount),
-                    'messages' => ['0' => 'Coupon Applied Successfully!']
+                    'messages' => ['0' => '¡Cupón aplicado con éxito!']
                 ]);
             }
         }
 
         return response()->json([
             'status' => 0,
-            'messages' => ['0' => 'Invalid Coupon']
+            'messages' => ['0' => 'Cupón no válido']
         ]);
     }
 }

@@ -51,7 +51,7 @@ class RegisterController extends Controller
         });
 
         if (is_null($exception)) {
-            Toastr::success('Shop apply successfully!');
+            Toastr::success('¡La tienda se aplica con éxito!');
         } else {
             Toastr::error('Something went wrong!');
         }

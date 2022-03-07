@@ -150,12 +150,12 @@
 $(document).on('click', '.delete', function () {
     var id = $(this).attr("id");
     Swal.fire({
-        title: 'Are you sure delete this banner?',
-        text: "You won't be able to revert this!",
+        title: '¿Estás seguro de eliminar este banner?',
+        text: "¡No podrás revertir esto!",
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: '¡Sí, bórralo!'
     }).then((result) => {
         if (result.value) {
             $.ajaxSetup({
@@ -168,7 +168,7 @@ $(document).on('click', '.delete', function () {
                 method: 'POST',
                 data: {id: id},
                 success: function () {
-                    toastr.success('Banner deleted successfully');
+                    toastr.success('Banner eliminado con éxito');
                     location.reload();
                 }
             });

@@ -43,7 +43,7 @@ class OrderController extends Controller
                 $type = $c['variations'][0]['type'];
                 foreach (json_decode($product['variation'], true) as $var) {
                     if ($type == $var['type'] && $var['qty'] < $c['quantity']) {
-                        $validator->getMessageBag()->add('stock', 'Stock is insufficient! available stock ' . $var['qty']);
+                        $validator->getMessageBag()->add('stock', '¡Las existencias son insuficientes! stock disponible' . $var['qty']);
                     }
                 }
             }
@@ -62,7 +62,7 @@ class OrderController extends Controller
             $request['discount']);
 
         return response()->json([
-            'message' => 'Order placed successfully!',
+            'message' => 'Pedido realizado correctamente!',
             'order_id' => $data
         ], 200);
     }

@@ -66,7 +66,7 @@ class ProductController extends BaseController
         }
 
         if ($request['unit_price'] <= $dis) {
-            $validator->getMessageBag()->add('unit_price', 'Discount can not be more or equal to the price!');
+            $validator->getMessageBag()->add('unit_price', '¡El descuento no puede ser mayor o igual al precio!');
         }
 
         if ($request['unit_price'] <= $dis || $validator->fails()) {
@@ -172,7 +172,7 @@ class ProductController extends BaseController
         }
 
         if ((integer)$request['current_stock'] != $stock_count) {
-            $validator->getMessageBag()->add('total_stock', 'Stock calculation mismatch!');
+            $validator->getMessageBag()->add('total_stock', '¡Desajuste en el cálculo de existencias!');
         }
 
         if ($validator->getMessageBag()->count() > 0) {
@@ -281,10 +281,10 @@ class ProductController extends BaseController
             'unit_price'     => 'required|numeric|min:1',
             'purchase_price' => 'required|numeric|min:1',
         ], [
-            'name.required'        => 'Product name is required!',
-            'category_id.required' => 'category  is required!',
-            'brand_id.required'    => 'brand  is required!',
-            'unit.required'        => 'Unit  is required!',
+            'name.required'        => '¡El nombre del producto es obligatorio!',
+            'category_id.required' => '¡La categoria es requerida!',
+            'brand_id.required'    => '¡La marca es obligatoria!',
+            'unit.required'        => '¡Se requiere unidad!',
         ]);
 
         if ($request['discount_type'] == 'percent') {
@@ -294,7 +294,7 @@ class ProductController extends BaseController
         }
 
         if ($request['unit_price'] <= $dis) {
-            $validator->getMessageBag()->add('unit_price', 'Discount can not be more or equal to the price!');
+            $validator->getMessageBag()->add('unit_price', '¡El descuento no puede ser mayor o igual al precio!');
         }
 
         if ($request['unit_price'] <= $dis || $validator->fails()) {
@@ -409,7 +409,7 @@ class ProductController extends BaseController
             $stock_count = (integer)$request['current_stock'];
         }
         if ((integer)$request['current_stock'] != $stock_count) {
-            $validator->getMessageBag()->add('total_stock', 'Stock calculation mismatch!');
+            $validator->getMessageBag()->add('total_stock', '¡Desajuste en el cálculo de existencias!');
         }
         if ($validator->getMessageBag()->count() > 0) {
             return response()->json(['errors' => Helpers::error_processor($validator)]);
@@ -466,7 +466,7 @@ class ProductController extends BaseController
         FlashDealProduct::where(['product_id' => $id])->delete();
         DealOfTheDay::where(['product_id' => $id])->delete();
 
-        Toastr::success('Product removed successfully!');
+        Toastr::success('¡Producto eliminado con éxito!');
         return back();
     }
 }

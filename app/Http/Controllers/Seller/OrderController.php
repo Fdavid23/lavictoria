@@ -71,7 +71,7 @@ class OrderController extends Controller
                             $type = $detail['variant'];
                             foreach (json_decode($product['variation'], true) as $var) {
                                 if ($type == $var['type'] && $var['qty'] < $c['qty']) {
-                                    Toastr::error('Stock is insufficient!');
+                                    Toastr::error('¡Las existencias son insuficientes!');
                                     return back();
                                 }
                             }
@@ -107,7 +107,7 @@ class OrderController extends Controller
         if ($request->ajax()) {
             $order = OrderDetail::find($request->id);
             if ($order->delivery_status == 'delivered') {
-                return response()->json(['success' => 0, 'message' => 'order is already delivered.'], 200);
+                return response()->json(['success' => 0, 'message' => 'el pedido ya esta entregado.'], 200);
             }
             $order->delivery_status = $request->delivery_status;
             $order->save();

@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title','Reset Pssword')
+@section('title','Restablecer la contraseña')
 
 @push('css_or_js')
     <style>

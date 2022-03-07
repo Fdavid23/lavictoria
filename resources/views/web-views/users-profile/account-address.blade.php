@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title','My Address')
+@section('title','Mi dirección')
 
 @push('css_or_js')
     <link rel="stylesheet" media="screen"
@@ -331,7 +331,7 @@
                                             <a class="" id="edit" data-toggle="modal" data-target="#editAddress_{{$shippingAddress->id}}">
                                                 <i class="fa fa-edit fa-lg"></i>
                                             </a>
-                                            <a class="" href="{{ route('address-delete',['id'=>$shippingAddress->id])}}" onclick="return confirm('Are you sure you want to Delete?');" id="delete">
+                                            <a class="" href="{{ route('address-delete',['id'=>$shippingAddress->id])}}" onclick="return confirm('¿Estás seguro de que quieres eliminar?');" id="delete">
                                                 <i class="fa fa-trash fa-lg"></i>
                                             </a>
 

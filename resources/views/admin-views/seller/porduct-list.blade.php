@@ -82,7 +82,7 @@
                 <h3 class="h3 mt-2 text-black-50">{{trans('messages.product_list')}}</h3>
             </div>
 
-          
+
         </div>
     </div>
 
@@ -149,7 +149,7 @@
                                                 <a class="dropdown-item"
                                                    href="{{route('admin.product.edit',[$p['id']])}}">{{trans('messages.Edit')}}</a>
                                                 <a class="dropdown-item" href="javascript:"
-                                                onclick="form_alert('product-{{$p['id']}}','Want to delete this item ?')">{{trans('messages.Delete')}}</a>
+                                                onclick="form_alert('product-{{$p['id']}}','¿Quieres eliminar este artículo?')">{{trans('messages.Delete')}}</a>
                                                 <form action="{{route('admin.product.delete',[$p['id']])}}"
                                                       method="post" id="product-{{$p['id']}}">
                                                     @csrf @method('delete')
@@ -204,7 +204,7 @@
                     status: status
                 },
                 success: function () {
-                    toastr.success('Status updated successfully');
+                    toastr.success('Estado actualizado con éxito');
                 }
             });
         });
@@ -222,7 +222,7 @@
                     id: id
                 },
                 success: function () {
-                    toastr.success('Featured status updated successfully');
+                    toastr.success('Estado destacado actualizado con éxito');
                 }
             });
         }

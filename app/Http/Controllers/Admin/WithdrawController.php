@@ -26,7 +26,7 @@ class WithdrawController extends Controller
         $w->save();
 
 
-        Toastr::success('Updated!');
+        Toastr::success('¡Actualizado!');
         return redirect()->back();
     }
 
@@ -40,7 +40,7 @@ class WithdrawController extends Controller
             return redirect()->back();
         }
 
-        Toastr::error('invalid request.!');
+        Toastr::error('Solicitud no válida.!');
         return redirect()->back();
     }
 }

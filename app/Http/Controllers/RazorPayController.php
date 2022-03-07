@@ -24,7 +24,7 @@ class RazorPayController extends Controller
     public function payment(Request $request)
     {
         if (session()->has('cart') == false) {
-            Toastr::warning('no items in your cart.');
+            Toastr::warning('No hay artículos en su carrito.');
             return redirect()->route('home');
         }
 
@@ -159,7 +159,7 @@ class RazorPayController extends Controller
             Toastr::success('Payment success.');
             return redirect('/account-oder');
         }
-        return response()->json(['message' => 'Payment succeeded'], 200);
+        return response()->json(['message' => 'Pago exitoso'], 200);
     }
 
     public function fail()
@@ -168,7 +168,7 @@ class RazorPayController extends Controller
             Toastr::error('Payment failed.');
             return redirect('/account-oder');
         }
-        return response()->json(['message' => 'Payment failed'], 403);
+        return response()->json(['message' => 'Pago fallido'], 403);
     }
 
 }

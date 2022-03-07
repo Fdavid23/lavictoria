@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title','My Support Tickets')
+@section('title','Mis tickets de soporte')
 
 @push('css_or_js')
     <style>
@@ -237,7 +237,7 @@
                                     <td class="bodytr">
                                         <span class="">
                                             <a class="btn btn-primary btn-sm"
-                                               href="{{route('support-ticket.index',$ticket['id'])}}">View
+                                               href="{{route('support-ticket.index',$ticket['id'])}}">Ver
                                             </a>
                                         </span>
                                     </td>
@@ -245,12 +245,12 @@
                                     <td class="bodytr">
                                         <a href="javascript:"
                                            onclick="Swal.fire({
-                                               title: 'Do you want to delete this?',
+                                               title: '¿Quieres eliminar esto?',
                                                showDenyButton: true,
                                                showCancelButton: true,
                                                confirmButtonColor: '{{$web_config['primary_color']}}',
                                                cancelButtonColor: '{{$web_config['secondary_color']}}',
-                                               confirmButtonText: `Yes`,
+                                               confirmButtonText: `Si`,
                                                denyButtonText: `Don't Delete`,
                                                }).then((result) => {
                                                if (result.value) {

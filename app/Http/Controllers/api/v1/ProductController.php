@@ -53,7 +53,7 @@ class ProductController extends Controller
             return response()->json($products, 200);
         }
         return response()->json([
-            'errors' => ['code' => 'product-001', 'message' => 'Product not found!']
+            'errors' => ['code' => 'product-001', 'message' => '¡Producto no encontrado!']
         ], 404);
     }
 
@@ -136,7 +136,7 @@ class ProductController extends Controller
         $review->attachment = json_encode($image_array);
         $review->save();
 
-        return response()->json(['message' => 'successfully review submitted!'], 200);
+        return response()->json(['message' => 'revisión enviada con éxito!'], 200);
     }
 
     public function get_shipping_methods(Request $request){

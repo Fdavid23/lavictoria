@@ -246,7 +246,7 @@
 
     function form_alert(id, message) {
         Swal.fire({
-            title: 'Are you sure?',
+            title: 'Estas seguro',
             text: message,
             type: 'warning',
             showCancelButton: true,

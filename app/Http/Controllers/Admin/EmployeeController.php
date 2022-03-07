@@ -28,9 +28,9 @@ class EmployeeController extends Controller
             'email'   => 'required|email|unique:users',
 
         ], [
-            'name.required'      => 'Role name is required!',
-            'role_name.required' => 'Role id is Required',
-            'email.required'     => 'Email id is Required',
+            'name.required'      => '¡El nombre del rol es obligatorio!',
+            'role_name.required' => 'El ID de rol es obligatorio',
+            'email.required'     => 'Se requiere identificación de correo electrónico',
 
         ]);
 
@@ -52,7 +52,7 @@ class EmployeeController extends Controller
             'updated_at'    => now(),
         ]);
 
-        Toastr::success('Employee added successfully!');
+        Toastr::success('Empleado añadido con éxito!');
         return back();
     }
 
@@ -74,11 +74,11 @@ class EmployeeController extends Controller
             'name'    => 'required',
             'role_id' => 'required',
         ], [
-            'name.required' => 'Role name is required!',
+            'name.required' => '¡El nombre del rol es obligatorio!',
         ]);
 
         if ($request->role_id == 1) {
-            Toastr::warning('Access Denied!');
+            Toastr::warning('¡Acceso denegado!');
             return back();
         }
 
@@ -102,7 +102,7 @@ class EmployeeController extends Controller
             'updated_at'    => now(),
         ]);
 
-        Toastr::success('Employee updated successfully!');
+        Toastr::success('Empleado actualizado con éxito!');
         return back();
     }
 }

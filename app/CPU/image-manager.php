@@ -107,7 +107,7 @@ class ImageManager
 
         return [
             'success' => 1,
-            'message' => 'Removed successfully !'
+            'message' => 'Eliminado con éxito!'
         ];
 
     }
