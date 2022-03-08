@@ -1,6 +1,6 @@
 @extends('layouts.front-end.app')
 
-@section('title','Terms & Conditions')
+@section('title','Términos y Condiciones')
 
 @push('css_or_js')
     <meta property="og:image" content="{{asset('storage/app/public/company')}}/{{$web_config['web_logo']->value}}"/>
@@ -35,7 +35,7 @@
 
 @section('content')
     <div class="container for-container">
-        <h2 class="text-center mt-3 headerTitle">Terms and Condition</h2>
+        <h2 class="text-center mt-3 headerTitle">Términos y Condiciones</h2>
         <div class="for-padding">
             {!! $terms_condition['value'] !!}
         </div>

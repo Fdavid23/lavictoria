@@ -77,7 +77,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 sidebar_heading text-center mb-2">
-                <h1 class="h3  mb-0 folot-left headerTitle">{{trans('messages.frequently_asked_question')}}</h1>
+                <h1 class="h3  mb-0 folot-left headerTitle">Preguntas Frecuentes</h1>
             </div>
         </div>
         <hr>
