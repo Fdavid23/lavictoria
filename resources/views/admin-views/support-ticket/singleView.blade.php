@@ -1,5 +1,5 @@
 @extends('layouts.back-end.app')
-@section('title','Support Ticket')
+@section('title','Ticket de soporte')
 @push('css_or_js')
     <!-- Custom styles for this page -->
     <link href="{{asset('public/assets/back-end')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -68,11 +68,11 @@
 @endpush
 
 @section('content')
-<div class="content container-fluid"> 
+<div class="content container-fluid">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-            <li class="breadcrumb-item" aria-current="page">Support Tickets</li>
+            <li class="breadcrumb-item" aria-current="page">Ticket de soporte</li>
         </ol>
     </nav>
 
@@ -121,7 +121,7 @@
 
     @endforeach
     <!-- Leave message-->
-    <h3 class="h5 mt-2 pt-4 pb-2">Leave a Message</h3>
+    <h3 class="h5 mt-2 pt-4 pb-2">Deja un mensaje</h3>
     @foreach($supportTicket as $reply)
         <form class="needs-validation" href="{{route('admin.support-ticket.replay',$reply['id'])}}" method="post"
               novalidate>
@@ -129,14 +129,14 @@
             <input type="hidden" name="id" value="{{$reply['id']}}">
             <input type="hidden" name="adminId" value="1">
             <div class="form-group">
-                <textarea class="form-control" name="replay" rows="8" placeholder="Write your message here..."
+                <textarea class="form-control" name="replay" rows="8" placeholder="Escriba su mensaje aquí..."
                           required></textarea>
-                <div class="invalid-tooltip">Please write the message!</div>
+                <div class="invalid-tooltip">¡Por favor escribe el mensaje!</div>
             </div>
             <div class="d-flex flex-wrap justify-content-between align-items-center">
                 <div class="custom-control custom-checkbox d-block">
                 </div>
-                <button class="btn btn-primary my-2" type="submit">Submit Reply</button>
+                <button class="btn btn-primary my-2" type="submit">Enviar respuesta</button>
             </div>
         </form>
     @endforeach

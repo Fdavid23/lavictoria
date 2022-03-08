@@ -97,7 +97,7 @@
                                     <div class="card card-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="mr-2">Name</span>
+                                                <span class="mr-2">Nombre</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm" for="toggleColumn_name">
@@ -111,7 +111,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="mr-2">Email</span>
+                                                <span class="mr-2">Correo</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm" for="toggleColumn_email">
@@ -125,7 +125,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="mr-2">Phone</span>
+                                                <span class="mr-2">Celular</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm"
@@ -140,7 +140,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <span class="mr-2">Total order</span>
+                                                <span class="mr-2">Orden Total</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm"
@@ -155,7 +155,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <span class="mr-2">Actions</span>
+                                                <span class="mr-2">Acciones</span>
 
                                                 <!-- Checkbox Switch -->
                                                 <label class="toggle-switch toggle-switch-sm"

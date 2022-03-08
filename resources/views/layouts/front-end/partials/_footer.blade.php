@@ -215,7 +215,7 @@
                         <div class="col-6 " style="text-align: center">
 
                                 <div class="mr-2 mb-2 pull-left">
-                                    <a class="fa fa-facebook-square" href="https://www.facebook.com/Garage-Republik--2287929074604611" role="button"  style="font-size:36px;   color:#ffffff; "><img
+                                    <a class="fa fa-facebook-square" href="https://www.facebook.com/Lacteoslavictoria-154803330046440/?ref=page_internal" role="button"  style="font-size:36px;   color:#ffffff; "><img
 
 
                                             alt=""></a>
@@ -430,11 +430,16 @@
             {{-- <hr> --}}
 
             <div class="col-md-12 mt-2">
-                <center><a href="http://www.websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
-                    <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=309073"></a><br><br><a href='http://boxindian.com/'></a></center>
-
+               <!-- Contador de visitas -->
+<center><a href="" title="Contador De Visitas Gratis">
+    <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=309174"></a><br><a href='http://www.websmultimedia.com/contador-de-visitas-gratis'>
+    </a>
+    <br>
+    <a href='http://www.websmultimedia.com/registro-de-marcas-y-logotipos'>
+        </a></center>
+    <!-- Fin Contador de visitas -->
                 <p class="text-center" style="font-size: 12px;">{{ $web_config['copyright_text']->value }}  </p>
-               <p style="font-size: 12px;"> Barrio Pilacoto/Parroquia Guaytacama</p>
+               <p style="font-size: 12px;"> Pilacoto - Guaytacama - Ecuador</p>
 
             </div>
 

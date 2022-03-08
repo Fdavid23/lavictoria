@@ -432,120 +432,17 @@
                          Consumidor Final
                      </a>
 
-                    {{-- <a href="{{route('generate-invoice',[$order->id])}}" class="btn btn-primary for-glaxy-mobile"
+                     <a href="{{route('generate-invoice',[$order->id])}}" class="btn btn-primary for-glaxy-mobile"
                        style="width:49%;">
                         {{trans('messages.generate_invoice')}}
-                    </a> --}}
-                    <a  data-toggle="modal" data-target="#myModal" class="btn btn-primary for-glaxy-mobile"
-                        style="width:49%;">
-                         {{trans('messages.generate_invoice')}}
-                     </a>
+                    </a>
+
 
                      <!-- Trigger the modal with a button -->
 
 
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="">
 
-    <!-- Modal content-->
-    <div class="container py-4 py-lg-5 my-4">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card border-0 box-shadow">
-                    <div class="card-body">
-                        <h2 class="h4 mb-1">Datos de Factura</h2>
-                        <p class="font-size-sm text-muted mb-4"></p>
-                        <form class="needs-validation_" id="sign-up-form" action="{{route('customer.auth.register')}}"
-                              method="postf">
-                            @csrf
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="reg-fn">{{trans('messages.first_name')}}</label>
-                                        <input class="form-control" type="text" name="f_name"  onkeypress="return soloLetras(event)" onblur="limpia()" id="miInput" required >
-                                        <div class="invalid-feedback">¡Por favor, introduzca su nombre !</div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="reg-ln">{{trans('messages.last_name')}}</label>
-                                        <input class="form-control" type="text" name="l_name" onkeypress="return soloLetras(event)" onblur="limpia()" id="miInput">
-                                        <div class="invalid-feedback">Por favor ingrese su apellido!</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="reg-email">{{trans('messages.email_address')}}</label>
-                                        <input class="form-control" type="email" name="email">
-                                        <div class="invalid-feedback">Por favor ingrese una dirección de correo electrónico válida!</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="reg-phone">{{trans('messages.phone_name')}}</label>
-                                        <input class="form-control" type="text" name="phone" required>
-                                        <div class="invalid-feedback">Por favor, introduzca su número de teléfono!</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="reg-phone"> Número de Cedula</label>
-                                        <input class="form-control" type="text" name="cedula" required >
-                                        <div class="invalid-feedback">Por favor, introduzca su número de Cedula!</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-
-                                    </div>
-                                    {{-- <div class="form-group">
-                                        <label for="reg-password">{{trans('messages.password')}}</label>
-                                        <input class="form-control" type="password" name="password">
-                                        <div class="invalid-feedback">Please enter password!</div>
-                                    </div> --}}
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-
-                                    </div>
-                                    {{-- <div class="form-group">
-                                        <label for="reg-password-confirm">{{trans('messages.confirm_password')}}</label>
-                                        <input class="form-control" type="password" name="con_password">
-                                        <div class="invalid-feedback">Passwords do not match!</div>
-                                    </div> --}}
-                                </div>
-                            </div>
-                            <div class="form-group d-flex flex-wrap justify-content-between">
-
-
-
-                            </div>
-                            <div class="row">
-                                <a href="{{route('generate-invoice',[$order->id])}}" class="btn btn-primary for-glaxy-mobile"
-                                    style="width:49%;">
-                                    Imprimir Factura
-                                 </a>
-                                 <a href="" class="btn btn-secondary for-glaxy-mobile"
-                                    style="width:49%;">
-                                     Salir
-                                 </a>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-  </div>
-</div>
                     <a id="track_order" class="btn btn-secondary" type="button"
                     style="width:49%; color: white; margin-top:2%">
                      Seguir {{trans('messages.Order')}}

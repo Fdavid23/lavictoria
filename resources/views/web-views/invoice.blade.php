@@ -198,7 +198,7 @@
             <div class="row">
                 <div class="col-12 " style="padding:15px;" header>
                     <div style="float: left;padding: 15px">
-                        <img height="70" width="200" src="{{asset("storage/app/public/company/$company_web_logo")}}"
+                        <img height="100" width="200" src="{{ asset('public/assets/front-end/img/logo27.png') }}"
                              alt="">
                         <p style="margin-bottom: 0px;">Celular:{{$company_phone}}</p>
                         <p style="margin-top: 5px; margin-bottom: 0px;" >Email:{{$company_email}}</p>

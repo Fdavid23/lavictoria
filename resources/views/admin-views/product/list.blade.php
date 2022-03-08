@@ -1,5 +1,5 @@
 @extends('layouts.back-end.app')
-@section('title','Product List')
+@section('title','Lista de Productos')
 @push('css_or_js')
     <!-- Custom styles for this page -->
     <link href="{{asset('public/assets/back-end')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -42,11 +42,11 @@
         }
 
         input:checked + .slider {
-            background-color: #377dff;
+            background-color: #258934;
         }
 
         input:focus + .slider {
-            box-shadow: 0 0 1px #377dff;
+            box-shadow: 0 0 1px #258934;
         }
 
         input:checked + .slider:before {
@@ -84,7 +84,7 @@
             </div>
 
             <div class="col-md-4">
-                <a href="{{route('admin.product.add-new')}}" class="btn btn-primary  float-right">
+                <a href="{{route('admin.product.add-new')}}" class="btn btn-success  float-right" style="background: #258934">
                     <i class="tio-add-circle"></i>
                     <span class="text">{{trans('messages.Add new product')}}</span>
                 </a>
@@ -106,10 +106,12 @@
                             <thead class="thead-light">
                             <tr>
                                 <th>{{trans('messages.SL#')}}</th>
+
                                 <th>{{trans('messages.Product Name')}}</th>
                                 <th>{{trans('messages.purchase_price')}}</th>
                                 <th>{{trans('messages.selling_price')}}</th>
                                 <th>{{trans('messages.featured')}}</th>
+                                <th>CANTIDAD STOCK</th>
                                 <th>{{trans('messages.status')}}</th>
                                 <th style="width: 5px">{{trans('messages.Action')}}</th>
                             </tr>
@@ -124,11 +126,12 @@
                                         </a>
                                     </td>
                                     <td>
-                                        {{ \App\CPU\BackEndHelper::usd_to_currency($p['purchase_price']).\App\CPU\BackEndHelper::currency_symbol()}}
+                                        {{ \App\CPU\BackEndHelper::currency_symbol().\App\CPU\BackEndHelper::usd_to_currency($p['purchase_price'])}}
                                     </td>
                                     <td>
-                                        {{ \App\CPU\BackEndHelper::usd_to_currency($p['unit_price']).\App\CPU\BackEndHelper::currency_symbol()}}
+                                        {{ \App\CPU\BackEndHelper::currency_symbol().\App\CPU\BackEndHelper::usd_to_currency($p['unit_price'])}}
                                     </td>
+
                                     <td>
                                         <label class="switch">
                                             <input type="checkbox"
@@ -137,12 +140,20 @@
                                         </label>
                                     </td>
                                     <td>
+
+
+                                            <span>    {{substr($p['current_stock'],0,20)}}{{strlen($p['current_stock'])>20?'...':''}}</span>
+
+                                    </td>
+                                    <td>
                                         <label class="switch">
                                             <input type="checkbox" class="status"
                                                    id="{{$p['id']}}" {{$p->status == 1?'checked':''}}>
                                             <span class="slider round"></span>
                                         </label>
                                     </td>
+
+
                                     <td>
                                         <!-- Dropdown -->
                                         <div class="dropdown">
@@ -228,7 +239,7 @@
                     id: id
                 },
                 success: function () {
-                    toastr.success('Estado destacado actualizado con éxito');
+                    toastr.success('Estado destacado actualizado correctamente');
                 }
             });
         }

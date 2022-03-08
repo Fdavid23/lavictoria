@@ -391,7 +391,7 @@
                                                                 {{\App\CPU\Helpers::currency_converter($deal->product->discount)}}
                                                             @endif
                                                             {{-- {{$deal->product->discount_type=='percent'?\App\CPU\Helpers::currency_converter($deal->product->discount):$deal->product->discount.' % '}}  --}}
-                                                OFF</span></div>
+                                                Oferta</span></div>
                                                 @else
                                                     <div class="inline_product"> <span class="for-discoutn-value-null">
                                                 </span></div>
@@ -483,7 +483,7 @@
                                                 </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    2QRl8lN74v
+                                                    LAVICTORIA
                                                 </div>
                                                 <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
