@@ -56,7 +56,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="reg-phone"> Número de Cedula</label>
-                                        <input class="form-control" type="text" name="cedula" required>
+                                        <input class="form-control" type="text" name="cedula" required onKeyPress="return soloNumeros(event)" onKeyUp="pierdeFoco(this)">
                                         <div class="invalid-feedback">Por favor, introduzca su número de Cedula!</div>
                                     </div>
                                 </div>
@@ -109,9 +109,9 @@
                                         <input type="checkbox" class="mr-1"
                                                name="remember" id="inputCheckd">
                                     </strong>
-                                    <label class="" for="remember">{{trans('messages.i_agree_to_Your_terms')}}<a
+                                    <label class="" for="remember">Acepto<a
                                             class="font-size-sm" target="_blank" href="{{route('terms')}}">
-                                            {{trans('messages.terms_and_condition')}}
+                                            Términos y Condiciones
                                         </a></label>
                                 </div>
 
@@ -194,6 +194,15 @@
         });
     </script>
      <script>
+         function soloNumeros(e) {
+   var key = window.Event ? e.which : e.keyCode;
+   return ((key >= 48 && key <= 57) ||(key==8))
+ }
+
+ function pierdeFoco(e){
+    var valor = e.value.replace(/^0*/, '');
+    e.value = valor;
+ }
         function soloLetras(e) {
             key = e.keyCode || e.which;
             tecla = String.fromCharCode(key).toLowerCase();

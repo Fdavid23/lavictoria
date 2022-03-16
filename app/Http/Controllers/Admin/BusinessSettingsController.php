@@ -335,7 +335,7 @@ class BusinessSettingsController extends Controller
                     ]),
             ]);
         }
-        Toastr::success('Color  updated!');
+        Toastr::success('¡Color actualizado!');
         return back();
     }
     public function fcm_index()
@@ -422,7 +422,7 @@ class BusinessSettingsController extends Controller
             'value' => $request['push_notification_key'],
         ]);
 
-        Toastr::success('Settings updated!');
+        Toastr::success('¡Ajustes actualizan!');
         return back();
     }
 

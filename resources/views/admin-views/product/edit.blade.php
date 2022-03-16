@@ -157,7 +157,7 @@
                                         name="category_id"
                                         id="category_id"
                                         onchange="getRequest('{{url('/')}}/admin/product/get-categories?parent_id='+this.value,'sub-category-select','select')">
-                                        <option value="0" selected disabled>---Select---</option>
+                                        <option value="0" selected disabled>---Seleccionar---</option>
                                         @foreach($categorys as $category)
                                             <option
                                                 value="{{$category['id']}}" {{ $category->id==$product_category[0]->id ? 'selected' : ''}} >{{$category['name']}}</option>
@@ -194,7 +194,7 @@
                                     <select
                                         class="js-example-basic-multiple js-states js-example-responsive form-control"
                                         name="brand_id">
-                                        <option value="{{null}}" selected disabled>---Select---</option>
+                                        <option value="{{null}}" selected disabled>---Seleccionar---</option>
                                         @foreach($br as $b)
                                             <option
                                                 value="{{$b['id']}}" {{ $b->id==$product->brand->id ? 'selected' : ''}} >{{$b['name']}}</option>
@@ -304,10 +304,10 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label class="control-label">{{trans('messages.Tax')}}</label>
+                                    <label class="control-label">IVA</label>
                                     <label class="badge badge-info">{{trans('messages.Percent')}} ( % )</label>
                                     <input type="number" min="0" value={{ $product->tax }} step="0.01"
-                                           placeholder="{{trans('messages.Tax') }}" name="tax"
+                                           placeholder="IVA" name="tax"
                                            class="form-control" required>
                                     <input name="tax_type" value="percent" style="display: none">
                                 </div>
@@ -347,7 +347,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h4>Product Details</h4>
+                        <h4>Detalles de producto</h4>
                     </div>
                     <div class="card-body">
                         <div class="form-group">

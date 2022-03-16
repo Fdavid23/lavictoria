@@ -200,7 +200,7 @@
                     <div style="float: left;padding: 15px">
                         <img height="100" width="200" src="{{ asset('public/assets/front-end/img/logo27.png') }}"
                              alt="">
-                        <p style="margin-bottom: 0px;">Celular:{{$company_phone}}</p>
+                        <p style="margin-bottom: 0px;">{{$company_phone}}</p>
                         <p style="margin-top: 5px; margin-bottom: 0px;" >Email:{{$company_email}}</p>
                     </div>
                     <div style="float: right;padding: 0 15px 15px 15px">
@@ -347,7 +347,7 @@
                 <tr>
                     <td style="width: 33%">
                         <div>
-                            <p style="font-size: 12px"> Celular : {{\App\Model\BusinessSetting::where('type','company_phone')->first()->value}}</p>
+                            <p style="font-size: 12px"> {{\App\Model\BusinessSetting::where('type','company_phone')->first()->value}}</p>
                         </div>
                     </td>
                     <td style="width: 33%">

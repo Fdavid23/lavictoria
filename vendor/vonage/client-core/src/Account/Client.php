@@ -93,7 +93,7 @@ class Client implements ClientAwareInterface
         $rawBody = $response->getBody()->getContents();
 
         if ($rawBody === '') {
-            throw new Exception\Server('No results found');
+            throw new Exception\Server('No se han encontrado resultados');
         }
 
         return json_decode($rawBody, true);
@@ -114,7 +114,7 @@ class Client implements ClientAwareInterface
         $rawBody = $response->getBody()->getContents();
 
         if ($rawBody === '') {
-            throw new Exception\Server('No results found');
+            throw new Exception\Server('No se han encontrado resultados');
         }
 
         $body = json_decode($rawBody, true);

@@ -74,7 +74,7 @@
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item  edit" style="cursor: pointer;"
-                                                id="{{$attribute['id']}}"> {{ trans('messages.Edit')}}</a>
+                                                id="{{$attribute['id']}}"> Editar</a>
                                                 <a class="dropdown-item delete"style="cursor: pointer;"
                                                 id="{{$attribute['id']}}">  {{ trans('messages.Delete')}}</a>
                                             </div>

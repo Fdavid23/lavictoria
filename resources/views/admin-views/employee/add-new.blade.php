@@ -10,7 +10,7 @@
               width: 367px !important;
             margin-left: 0 !important;
         }
-       
+
         }
 
    @media(max-width:500px){
@@ -18,14 +18,14 @@
               width: 400px !important;
             margin-left: 0 !important;
         }
-      
-      
+
+
    }
     </style>
 @endpush
 
 @section('content')
-<div class="content container-fluid"> 
+<div class="content container-fluid">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{trans('messages.Dashboard')}}</a></li>
@@ -73,13 +73,13 @@
                                     <label for="name">{{trans('messages.Role')}}</label>
                                     <select class="form-control" name="role_id"
                                             style="width: 100%" >
-                                        <option value="0" selected disabled>---select---</option>
+                                        <option value="0" selected disabled>---Seleccionar---</option>
                                         @foreach($rls as $r)
                                             <option value="{{$r->id}}">{{$r->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                               
+
                             </div>
                         </div>
 
@@ -96,7 +96,7 @@
                                             data-target="#employee-image-modal" data-whatever="@mdo">
                                             <i class="tio-add-circle"></i> Upload Image
                                             <strong id="image-count-employee-image-modal"></strong>
-                                       
+
                                     </button>
                                 </div>
                             </div>

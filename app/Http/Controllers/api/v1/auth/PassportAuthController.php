@@ -61,7 +61,7 @@ class PassportAuthController extends Controller
             return response()->json(['token' => $token], 200);
         } else {
             $errors = [];
-            array_push($errors, ['code' => 'auth-001', 'message' => 'Unauthorized.']);
+            array_push($errors, ['code' => 'auth-001', 'message' => 'No autorizado.']);
             return response()->json([
                 'errors' => $errors
             ], 401);

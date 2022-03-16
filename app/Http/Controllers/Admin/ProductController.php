@@ -53,10 +53,10 @@ class ProductController extends BaseController
             'unit_price'     => 'required|numeric|min:1',
             'purchase_price' => 'required|numeric|min:1',
         ], [
-            'name.required'        => 'Product name is required!',
-            'category_id.required' => 'category  is required!',
-            'brand_id.required'    => 'brand  is required!',
-            'unit.required'        => 'Unit  is required!',
+            'name.required'        => '¡El nombre del producto es obligatorio!',
+            'category_id.required' => '¡La categoria es requerida!',
+            'brand_id.required'    => '¡La marca es obligatoria!',
+            'unit.required'        => '¡Se requiere unidad!',
         ]);
 
         if ($request['discount_type'] == 'percent') {
@@ -217,7 +217,7 @@ class ProductController extends BaseController
     public function get_categories(Request $request)
     {
         $cat = Category::where(['parent_id' => $request->parent_id])->get();
-        $res = '<option value="' . 0 . '" disabled selected>---Select---</option>';
+        $res = '<option value="' . 0 . '" disabled selected>---Seleccionar---</option>';
         foreach ($cat as $row) {
             if ($row->id == $request->sub_category) {
                 $res .= '<option value="' . $row->id . '" selected >' . $row->name . '</option>';

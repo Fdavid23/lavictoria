@@ -156,7 +156,7 @@
                                         class="js-example-basic-multiple js-states js-example-responsive form-control"
                                         name="category_id"
                                         onchange="getRequest('{{url('/')}}/admin/product/get-categories?parent_id='+this.value,'sub-category-select','select')">
-                                        <option value="0" selected disabled>---Select---</option>
+                                        <option value="0" selected disabled>---Seleccionar---</option>
                                         @foreach($cat as $c)
                                             <option value="{{$c['id']}}">{{$c['name']}}</option>
                                         @endforeach
@@ -190,7 +190,7 @@
                                     <select
                                         class="js-example-basic-multiple js-states js-example-responsive form-control"
                                         name="brand_id">
-                                        <option value="{{null}}" selected disabled>---Select---</option>
+                                        <option value="{{null}}" selected disabled>---Seleccionar---</option>
                                         @foreach($br as $b)
                                             <option value="{{$b['id']}}">{{$b['name']}}</option>
                                         @endforeach
@@ -224,7 +224,7 @@
                 </div>
                 <div class="card mt-2">
                     <div class="card-header">
-                        <h4>Variations</h4>
+                        <h4>Variaciones</h4>
                     </div>
                     <div class="card-body">
 
@@ -280,7 +280,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label class="control-label">{{trans('messages.Unit price')}}</label>
-                                    <input type="number" min="0" value="0" step="0.01"
+                                    <input type="number" min="-1" value="0" step="0.01"
                                            placeholder="{{trans('messages.Unit price')}}"
                                            name="unit_price" class="form-control" required>
                                 </div>
@@ -293,10 +293,10 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label class="control-label">{{trans('messages.Tax')}}</label>
+                                    <label class="control-label">IVA</label>
                                     <label class="badge badge-info">{{trans('messages.Percent')}} ( % )</label>
                                     <input type="number" min="0" value="0" step="0.01"
-                                           placeholder="{{trans('messages.Tax')}}}" name="tax"
+                                           placeholder="IVA" name="tax"
                                            class="form-control">
                                     <input name="tax_type" value="percent" style="display: none">
                                 </div>

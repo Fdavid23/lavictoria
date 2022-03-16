@@ -234,7 +234,8 @@
                                 </li>
                                 <li>
                                     <input type="radio" id="a50" name="addressAs" value="home"/>
-                                    <label for="a50" class="component">{{trans('messages.Home')}}</label>
+                                    <label for="a50" class="component">Casa</label>
+
                                 </li>
                                 <li>
                                     <input type="radio" id="a75" name="addressAs" value="office" checked="checked"/>
@@ -325,7 +326,7 @@
                                 {{-- <div class="card cardColor"> --}}
                                     <div class="card-header" style=" border: 1px solid {{$web_config['primary_color']}}; padding: 5px;">
                                         <i class="fa fa-thumb-tack fa-2x iconHad" aria-hidden="true"></i>
-                                        <span class="namHad"> {{$shippingAddress['address_type']}} {{trans('messages.address')}} </span>
+                                        <span class="namHad"> Dirección</span>
                                         {{-- <div> --}}
                                         <span class="float-right iconSp">
                                             <a class="" id="edit" data-toggle="modal" data-target="#editAddress_{{$shippingAddress->id}}">
@@ -361,7 +362,7 @@
                                                                 </li>
                                                                 <li class="address_type_li">
                                                                     <input type="radio" class="address_type" id="a50" name="addressAs" value="home" {{ $shippingAddress->address_type == 'home' ? 'checked' : ''}} />
-                                                                    <label for="a50" class="component">{{trans('messages.Home')}}</label>
+                                                                    <label for="a50" class="component">Casa</label>
                                                                 </li>
                                                                 <li class="address_type_li">
                                                                     <input type="radio" class="address_type" id="a75" name="addressAs" value="office" {{ $shippingAddress->address_type == 'office' ? 'checked' : ''}}/>
@@ -503,7 +504,7 @@
                         phone: phone
                     },
                     success: function () {
-                        toastr.success('Address Update Successfully.');
+                        toastr.success('Actualización de dirección con éxito.');
                         location.reload();
                         // $('#name').val('');
                         // $('#link').val('');
@@ -513,7 +514,7 @@
                     }
                 });
             }else{
-                toastr.error('All input field required.');
+                toastr.error('Todos los campos de entrada son obligatorios.');
             }
 
         });

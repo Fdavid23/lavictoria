@@ -94,7 +94,7 @@
                                        --}}
                                     <label for="name">{{trans('messages.name')}}</label>
                                     <select class="form-control" name="name" id="name" style="width: 100%">
-                                        <option>---select---</option>
+                                        <option>---Seleccionar---</option>
                                         <option value="instagram">Instagram</option>
                                         <option value="facebook">Facebook</option>
                                         <option value="twitter">Twitter</option>
@@ -114,8 +114,8 @@
                                     {{-- <label for="icon">{{ trans('messages.social_media_icon')}}</label>
                                     <input type="text" name="icon" class="form-control" id="icon"
                                            placeholder="Enter Social Media Icon" required> --}}
-                                         
-                                            
+
+
                                 </div>
 
                             </div>
@@ -175,7 +175,7 @@
         // $(".js-example-theme-single").select2({
         //     theme: "classic"
         // });
-        
+
         fetch_social_media();
 
         function fetch_social_media() {
@@ -272,7 +272,7 @@
                     $('#name').val('');
                     $('#link').val('');
                     $('#icon').val('');
-                    
+
                     toastr.success('Category updated Successfully.');
                     $('#update').hide();
                     $('#add').show();
@@ -323,7 +323,7 @@
                 }
             });
         });
-        
+
         $(document).on('change','.status',function () {
             var id = $(this).attr("id");
             if($(this).prop("checked") == true){

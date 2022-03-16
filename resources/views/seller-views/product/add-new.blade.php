@@ -155,7 +155,7 @@
                                             class="form-control js-select2-custom"
                                             name="category_id"
                                             onchange="getRequest('{{url('/')}}/seller/product/get-categories?parent_id='+this.value,'sub-category-select','select')">
-                                            <option value="0" selected disabled>---Select---</option>
+                                            <option value="0" selected disabled>---Seleccionar---</option>
                                             @foreach($cat as $c)
                                                 <option value="{{$c['id']}}">{{$c['name']}}</option>
                                             @endforeach
@@ -189,7 +189,7 @@
                                         <select
                                             class="form-control js-select2-custom"
                                             name="brand_id">
-                                            <option value="{{null}}" selected disabled>---Select---</option>
+                                            <option value="{{null}}" selected disabled>---Seleccionar---</option>
                                             @foreach($br as $b)
                                                 <option value="{{$b['id']}}">{{$b['name']}}</option>
                                             @endforeach

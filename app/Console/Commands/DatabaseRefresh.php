@@ -24,7 +24,7 @@ class DatabaseRefresh extends Command
      *
      * @var string
      */
-    protected $description = 'Refresh database after a certain time';
+    protected $description = 'Actualizar la base de datos después de un tiempo determinado';
 
     /**
      * Create a new command instance.

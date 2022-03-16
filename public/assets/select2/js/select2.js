@@ -4519,7 +4519,7 @@ S2.define('select2/i18n/en',[],function () {
       return message;
     },
     noResults: function () {
-      return 'No results found';
+      return 'No se han encontrado resultados';
     },
     searching: function () {
       return 'Searching…';
