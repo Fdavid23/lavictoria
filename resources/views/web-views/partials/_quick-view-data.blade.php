@@ -184,7 +184,7 @@ $productReviews = \App\CPU\ProductManager::get_product_review($product->id);
             <div class="details">
                 <a href="{{route('product',$product->slug)}}" class="h3 mb-2 product-title">{{$product->name}}</a>
                 <div class="d-flex align-items-center mb-2 pro">
-                    <span
+                    {{-- <span
                         class="d-inline-block font-size-sm text-body align-middle mt-1 mr-2 pr-2">{{$overallRating[0]}}</span>
                     <div class="star-rating">
                         @if ($overallRating[0]==5)
@@ -225,12 +225,12 @@ $productReviews = \App\CPU\ProductManager::get_product_review($product->id);
                                 <i class="sr-star czi-star"></i>
                             @endfor
                         @endif
-                    </div>
-                    <span class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-2 pl-2 pr-2">{{$overallRating[1]}} Reviews</span>
-                    <span style="width: 0px;height: 10px;border: 0.5px solid #707070; margin-top: 6px"></span>
-                    <span class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-2 pl-2 pr-2">{{$countOrder}} orders  </span>
-                    <span style="width: 0px;height: 10px;border: 0.5px solid #707070; margin-top: 6px">    </span>
-                    <span class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-2 pl-2 pr-2">  {{$countWishlist}}  wish</span>
+                    </div> --}}
+                    {{-- <span class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-2 pl-2 pr-2">{{$overallRating[1]}} Reviews</span>
+                    <span style="width: 0px;height: 10px;border: 0.5px solid #707070; margin-top: 6px"></span> --}}
+                    <span class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-2 pl-2 pr-2">{{$countOrder}} Pedidos  </span>
+                    {{-- <span style="width: 0px;height: 10px;border: 0.5px solid #707070; margin-top: 6px">    </span>
+                    <span class="d-inline-block font-size-sm text-body align-middle mt-1 ml-1 mr-2 pl-2 pr-2">  {{$countWishlist}}  wish</span> --}}
 
                 </div>
                 <div class="mb-3">
@@ -246,7 +246,7 @@ $productReviews = \App\CPU\ProductManager::get_product_review($product->id);
 
                 <div class="mb-3">
                     <strong>
-                        TAX : {{ \App\CPU\Helpers::currency_converter(
+                       Impuesto: {{ \App\CPU\Helpers::currency_converter(
                                     \App\CPU\Helpers::tax_calculation($product->unit_price,$product->tax,$product->tax_type)
                                 )}}
                     </strong>
@@ -313,7 +313,7 @@ $productReviews = \App\CPU\ProductManager::get_product_review($product->id);
                 <!-- Quantity + Add to cart -->
                     <div class="row no-gutters">
                         <div class="col-2">
-                            <div class="product-description-label mt-2">{{__('Quantity')}}:</div>
+                            <div class="product-description-label mt-2">Cantidad:</div>
                         </div>
                         <div class="col-10">
                             <div class="product-quantity d-flex align-items-center">

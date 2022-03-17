@@ -50,8 +50,8 @@ class ProductController extends BaseController
             'category_id'    => 'required',
             'brand_id'       => 'required',
             'unit'           => 'required',
-            'unit_price'     => 'required|numeric|min:1',
-            'purchase_price' => 'required|numeric|min:1',
+            'unit_price'     => 'required|numeric|min:0',
+            'purchase_price' => 'required|numeric|min:0',
         ], [
             'name.required'        => '¡El nombre del producto es obligatorio!',
             'category_id.required' => '¡La categoria es requerida!',
@@ -278,8 +278,8 @@ class ProductController extends BaseController
             'brand_id'       => 'required',
             'details'        => 'required',
             'unit'           => 'required',
-            'unit_price'     => 'required|numeric|min:1',
-            'purchase_price' => 'required|numeric|min:1',
+            'unit_price'     => 'required|numeric|min:0',
+            'purchase_price' => 'required|numeric|min:0',
         ], [
             'name.required'        => '¡El nombre del producto es obligatorio!',
             'category_id.required' => '¡La categoria es requerida!',

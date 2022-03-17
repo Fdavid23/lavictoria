@@ -610,7 +610,7 @@
 
                 @else
                     <div class="text-center pt-5">
-                        <h2>No Product Found</h2>
+                        <h2>No se encontró ningún producto</h2>
                     </div>
                 @endif
             </section>

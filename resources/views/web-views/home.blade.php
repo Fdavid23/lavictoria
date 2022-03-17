@@ -683,7 +683,7 @@
                         <center>
                             <strong style="font-size: 21px!important;color: {{$web_config['primary_color']}}">
                                 {{$deal_of_the_day->discount_type=='amount'?\App\CPU\Helpers::currency_converter($deal_of_the_day->discount):$deal_of_the_day->discount.' % '}}
-                                OFF
+                             Impuesto
                             </strong>
                         </center>
                         <div class="d-flex justify-content-center align-items-center" style="padding-top: 37px">

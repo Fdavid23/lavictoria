@@ -12,7 +12,7 @@
                         {{\App\CPU\Helpers::currency_converter($product->discount)}}
                     @endif
                     {{-- {{$product->discount_type=='amount'?\App\CPU\Helpers::currency_converter($product->discount):$product->discount.' % '}} --}}
-            OFF</span></div>
+            Descuento</span></div>
         @else
             <div class="d-flex justify-content-end for-dicount-div-null"> <span class="for-discoutn-value-null">
                 </span></div>

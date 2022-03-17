@@ -300,7 +300,7 @@
                                     <input type="number" min="0" step="0.01"
                                            placeholder="{{trans('messages.Purchase price') }}"
                                            name="purchase_price" class="form-control"
-                                           value={{ \App\CPU\BackEndHelper::usd_to_currency($product->purchase_price) }} required>
+                                           value={{ \App\CPU\BackEndHelper::usd_to_currency($product->unit_price) }} required>
                                 </div>
 
                                 <div class="col-md-6">
