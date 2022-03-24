@@ -124,7 +124,7 @@
 
 
                         <li class="nav-item">
-                            <small class="nav-subtitle" title="Pages">{{trans('messages.product_management')}}mbvmbv</small>
+                            <small class="nav-subtitle" title="Pages">{{trans('messages.product_management')}}</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
 
@@ -490,24 +490,14 @@
                             </a>
                             <ul class="js-navbar-vertical-aside-submenu nav nav-sub"
                                 style="display: {{Request::is('admin/business-settings*')|| Request::is('admin/currency*') || Request::is('admin/helpTopic*') ?'block':'none'}}">
-                                <li class="nav-item {{Request::is('admin/business-settings/language')?'active':''}}">
-                                    <a class="nav-link " href="{{route('admin.business-settings.language.index')}}" title="add new  language">
-                                        <span class="tio-circle nav-indicator-icon"></span>
-                                        <span class="text-truncate">{{trans('messages.Language')}}</span>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item {{Request::is('admin/business-settings/mail')?'active':''}}">
                                     <a class="nav-link " href="{{route('admin.business-settings.mail.index')}}" title=" mail config">
                                         <span class="tio-circle nav-indicator-icon"></span>
                                         <span class="text-truncate">{{trans('messages.mail_config')}}</span>
                                     </a>
                                 </li>
-                                <li class="nav-item {{Request::is('admin/business-settings/shipping-method/add')?'active':''}}">
-                                    <a class="nav-link " href="{{route('admin.business-settings.shipping-method.add')}}" title=" shippitng method">
-                                        <span class="tio-circle nav-indicator-icon"></span>
-                                        <span class="text-truncate">{{trans('messages.shipping_method')}}</span>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item {{Request::is('admin/currency/view')?'active':''}}">
                                     <a class="nav-link " href="{{route('admin.currency.view')}}" title="add new currency">
                                         <span class="tio-circle nav-indicator-icon"></span>
@@ -540,7 +530,7 @@
                                     <li class="nav-item {{Request::is('admin/business-settings/terms-condition')?'active':''}}">
                                         <a class="nav-link " href="{{route('admin.business-settings.terms-condition')}}" title="add new about us">
                                             <span class="tio-circle nav-indicator-icon"></span>
-                                            <span class="text-truncate">{{trans('messages.terms_and_condition')}}</span>
+                                            <span class="text-truncate">Términos y Condiciones</span>
                                         </a>
                                     </li>
                                     <li class="nav-item {{Request::is('admin/business-settings/web-config')?'active':''}}">
@@ -549,20 +539,9 @@
                                             <span class="text-truncate">{{trans('messages.web_config')}}</span>
                                         </a>
                                     </li>
-                                    <li class="nav-item {{Request::is('admin/business-settings/fcm-index')?'active':''}}">
-                                        <a class="nav-link " href="{{route('admin.business-settings.fcm-index')}}"
-                                           title="add new banner">
-                                            <span class="tio-circle nav-indicator-icon"></span>
-                                            <span class="text-truncate">Push Notification</span>
-                                        </a>
-                                    </li>
 
-                                    <li class="nav-item {{Request::is('admin/business-settings/social-media')?'active':''}}">
-                                        <a class="nav-link " href="{{route('admin.business-settings.social-media')}}" title="change social media">
-                                            <span class="tio-circle nav-indicator-icon"></span>
-                                            <span class="text-truncate">{{trans('messages.social_media')}}</span>
-                                        </a>
-                                    </li>
+
+
 
 
                             </ul>

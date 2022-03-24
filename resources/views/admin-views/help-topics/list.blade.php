@@ -176,7 +176,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add Help Topic</h5>
+                    <h5 class="modal-title">Agregar tema de ayuda</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
                             aria-hidden="true">&times;</span>
                     </button>
@@ -186,20 +186,20 @@
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label>Question</label>
-                            <input type="text" class="form-control"  name="question" placeholder="Type Question">
+                            <label>Pregunta</label>
+                            <input type="text" class="form-control"  name="question" placeholder="Tipo de Pregunta">
                         </div>
 
 
                         <div class="form-group">
-                            <label>Answer</label>
+                            <label>Responder</label>
                             <textarea class="form-control"  name="answer" cols="5"
-                                rows="5" placeholder="Type Answer"></textarea>
+                                rows="5" placeholder="Escriba la respuesta"></textarea>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <div class="control-label">Status</div>
+                                    <div class="control-label">Estado</div>
                                     <label class="custom-switch" style="margin-left: -2.25rem;margin-top: 10px;">
                                       <input type="checkbox" name="status" id="e_status" value="1" class="custom-switch-input">
                                       <span class="custom-switch-indicator"></span>
@@ -209,15 +209,15 @@
                                 </div>
 
                             <div class="col-md-6">
-                                <label for="ranking">Ranking</label>
+                                <label for="ranking">Clasificación</label>
                                 <input type="number" name="ranking" class="form-control"  autofoucs>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-whitesmoke br">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button class="btn btn-primary">Guardar</button>
                 </form>
                </div>
             </div>
@@ -230,7 +230,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Modal Help Topic</h5>
+                    <h5 class="modal-title">Editar tema de ayuda modal</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
                             aria-hidden="true">&times;</span>
                     </button>
@@ -241,13 +241,13 @@
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label>Question</label>
+                            <label>Pregunta</label>
                             <input type="text" class="form-control"  name="question" placeholder="Type Question" id="e_question" class="e_name">
                         </div>
 
 
                         <div class="form-group">
-                            <label>Answer</label>
+                            <label>Responder</label>
                             <textarea class="form-control"  name="answer" cols="5"
                                 rows="5" placeholder="Type Answer" id="e_answer"></textarea>
                         </div>
@@ -257,7 +257,7 @@
                                 </div>
 
                             <div class="col-md-4">
-                                <label for="ranking">Ranking</label>
+                                <label for="ranking">Clasificación</label>
                                 <input type="number" name="ranking" class="form-control" id="e_ranking" required autofoucs>
                             </div>
                             <div class="col-md-4">
@@ -267,8 +267,8 @@
 
                     </div>
                     <div class="modal-footer bg-whitesmoke br">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button class="btn btn-primary">update</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button class="btn btn-primary">Actualizar</button>
                 </form>
                </div>
             </div>
@@ -332,12 +332,12 @@
        $(document).on('click', '.delete', function () {
             var id = $(this).attr("id");
             Swal.fire({
-                title: 'Are you sure delete this FAQ?',
-                text: "You won't be able to revert this!",
+                title: '¿Estás seguro de eliminar estas preguntas frecuentes?',
+                text: "¡No podrás revertir esto!",
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: '¡Sí, bórralo!'
             }).then((result) => {
                 if (result.value) {
                     $.ajaxSetup({
@@ -350,7 +350,7 @@
                         method: 'POST',
                         data: {id: id},
                         success: function () {
-                            toastr.success('FAQ deleted successfully');
+                            toastr.success('Preguntas frecuentes eliminadas con éxito');
                             location.reload();
                         }
                     });

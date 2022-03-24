@@ -263,7 +263,7 @@
 
                     <div class="mb-3">
                         <strong>
-                           Impuesto : {{ \App\CPU\Helpers::currency_converter(
+                           Iva: {{ \App\CPU\Helpers::currency_converter(
                                     \App\CPU\Helpers::tax_calculation($product->unit_price,$product->tax,$product->tax_type)
                                 )}}
                         </strong>
@@ -318,7 +318,7 @@
                                                        id="{{ $choice->name }}-{{ $option }}"
                                                        name="{{ $choice->name }}" value="{{ $option }}"
                                                        @if($key == 0) checked @endif>
-                                                <label for="{{ $choice->name }}-{{ $option }}" style="width: 20%; font-size: 120%">{{ $option }}</label>
+                                                <label for="{{ $choice->name }}-{{ $option }}" style="width: 30%; font-size: 120%">{{ $option }}</label>
                                             </li>
                                         @endforeach
                                     </ul>

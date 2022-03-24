@@ -1,5 +1,5 @@
 @extends('layouts.back-end.app')
-@section('title','Terms & Condition')
+@section('title','Términos y Condiciones')
 @push('css_or_js')
     <!-- Custom styles for this page -->
     <link href="{{asset('public/assets/back-end')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{trans('messages.Dashboard')}}</a></li>
-            <li class="breadcrumb-item" aria-current="page">{{trans('messages.terms_and_condition')}}</li>
+            <li class="breadcrumb-item" aria-current="page">Términos y Condiciones</li>
         </ol>
     </nav>
 
@@ -87,7 +87,7 @@
                 <div class="card-header">
                     <div class="row justify-content-between pl-4 pr-4">
                         <div>
-                            <h2>{{trans('messages.terms_and_condition')}}</h2>
+                            <h2>Términos y Condiciones</h2>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                         @foreach($terms_condition as $terms_condition)
                         <div class="form-group">
                             <div class="col-md-12">
-                                <label for="editor">{{trans('messages.terms_and_condition')}}</label><textarea class="form-control" id="editor" name="value">{{$terms_condition->value}}</textarea>
+                                <label for="editor">Términos y Condiciones</label><textarea class="form-control" id="editor" name="value">{{$terms_condition->value}}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
