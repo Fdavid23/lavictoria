@@ -20,7 +20,7 @@
                 <div class="card-header">
                     <div class="row justify-content-between pl-4 pr-4">
                         <div>
-                            <h5><b>Ver Depósito</b></h5>
+                            <h5><b>Ver Depósito por foto </b></h5>
                         </div>
                     </div>
                 </div>
