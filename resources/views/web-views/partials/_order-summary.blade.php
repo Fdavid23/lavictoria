@@ -90,7 +90,7 @@
                                required>
                         <div class="invalid-feedback">Proporcione el código de cupón.</div>
                     </div>
-                    <button class="btn btn-primary btn-block" type="button" onclick="couponCode()">Aplica el código
+                    <button class="btn  btn-block" style="background-color: #AF1C1C; color: white; " type="button" onclick="couponCode()">Aplica el código
                     </button>
                 </form>
             </div>

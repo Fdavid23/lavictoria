@@ -246,7 +246,7 @@ $productReviews = \App\CPU\ProductManager::get_product_review($product->id);
 
                 <div class="mb-3">
                     <strong>
-                       Impuesto: {{ \App\CPU\Helpers::currency_converter(
+                      Iva: {{ \App\CPU\Helpers::currency_converter(
                                     \App\CPU\Helpers::tax_calculation($product->unit_price,$product->tax,$product->tax_type)
                                 )}}
                     </strong>
@@ -342,7 +342,7 @@ $productReviews = \App\CPU\ProductManager::get_product_review($product->id);
 
                     <div class="row no-gutters d-none mt-2" id="chosen_price_div">
                         <div class="col-2">
-                            <div class="product-description-label">{{__('Total Price')}}:</div>
+                            <div class="product-description-label">Precio Total:</div>
                         </div>
                         <div class="col-10">
                             <div class="product-price">
@@ -391,12 +391,12 @@ $productReviews = \App\CPU\ProductManager::get_product_review($product->id);
                     </div>
                     <div class="d-flex justify-content-between mt-2">
 
-                        <button class="btn btn-secondary" onclick="buy_now()"
+                        <button class="btn  " style="background-color: #AF1C1C; color: white; margin-left:0%; " onclick="buy_now()"
                                 type="button"
                                 style="width:37%; height: 45px">
                             {{trans('messages.buy_now')}}
                         </button>
-                        <button class="btn btn-primary"
+                        <button class="btn btn-block" style="background-color: #47B745; color: white; margin-left:25%; margin-right: 2% "
                                 onclick="addToCart()"
                                 type="button"
                                 style="width:37%; height: 45px">

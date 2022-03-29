@@ -70,8 +70,15 @@
                                     <div class="card-body">
                                         <input type="radio" name="payment_gateway" id="stripe" {{session('payment_method')=='stripe'?'checked':''}}>
                                         <span class="checkmark" style="margin-right: 10px"></span>
-                                        <span>{{trans('messages.stripe_online_payment')}}</span>
+                                        <span>{{trans('messages.stripe_online_payment')}}dfsfsf</span>
                                     </div>
+                                    <form action="" enctype="multipart/form-data" method="POST">
+                                        @csrf
+                                        <input type="text" name="nombre" placeholder="ingrese nombre:">
+                                        <input type="file" name="imagen">
+                                        <button type="submit">GUARDAR</button>
+
+                                     </form>
                                 </div>
                             @endif
                         </div>
@@ -94,8 +101,22 @@
                                     <div class="card-body">
                                         <input type="radio" name="payment_gateway" id="paytm" {{session('paytm')=='ssl_commerz_payment'?'checked':''}}>
                                         <span class="checkmark" style="margin-right: 10px"></span>
-                                        <span>{{trans('messages.paytm_online_payment')}}</span>
+                                        <span>Pago transferencia o deposito</span>
+                                        <br>
+
                                     </div>
+                                    <span style="color: #2e0f9b; text-align: justify; ">  Realiza tu pago directamente nuestra cuenta bancaria, por favor usa el número de pedido como referencia de tu pago. Tu pedido no se procesará hasta que se haya recibido el importe a nuestra cuenta.
+                                    </span>
+                                    <br>
+                                    <span>Imagen de transferencia</span>
+                                    <br>
+                                    <form action="codeaguardar" enctype="multipart/form-data" method="POST">
+                                        @csrf
+                                        <input type="file" name="imagen">
+
+
+                                        <button type="submit" class="btn btn-primary btn-block" style="background-color: #1c0447; color: white; margin-top:5%"  >Enviar</button>
+                                     </form>
                                 </div>
                             @endif
                         </div>
@@ -103,14 +124,14 @@
                     <!-- Navigation (desktop)-->
                     <div class="row">
                         <div class="col-6">
-                            <a class="btn btn-secondary btn-block" href="{{route('checkout-shipping')}}">
+                            <a class="btn  btn-block"  style="background-color: #EAE4DC; color: rgb(3, 3, 3); margin-left:0%" href="{{route('checkout-shipping')}}">
                                 <i class="czi-arrow-left mt-sm-0 mr-1"></i>
                                 <span class="d-none d-sm-inline">Volver a Envíos</span>
                                 <span class="d-inline d-sm-none">Atrás</span>
                             </a>
                         </div>
                         <div class="col-6">
-                            <a class="btn btn-primary btn-block"
+                            <a class="btn  btn-block" style="background-color: #AF1C1C; color: white; margin-left:0%"
                                href="{{route('checkout-review')}}">
                                 <span class="d-none d-sm-inline">Revise su orden</span>
                                 <span class="d-inline d-sm-none">Revisar orden</span>

@@ -234,6 +234,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.'], fu
             Route::get('general-settings', 'BusinessSettingsController@index')->name('general-settings');
             Route::get('update-language', 'BusinessSettingsController@update_language')->name('update-language');
             Route::get('about-us', 'BusinessSettingsController@about_us')->name('about-us');
+            Route::get('about-us1', 'BusinessSettingsController@about_us1')->name('about-us1');
             Route::post('about-us', 'BusinessSettingsController@about_usUpdate')->name('about-update');
             //Social Icon
             Route::get('social-media', 'BusinessSettingsController@social_media')->name('social-media');

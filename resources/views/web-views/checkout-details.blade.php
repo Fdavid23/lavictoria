@@ -223,7 +223,7 @@
                 <br>
                 <div class="row">
                     <div class="col-6">
-                        <a class="btn btn-secondary btn-block" href="{{route('shop-cart')}}">
+                        <a class="btn  btn-block" style="background-color:  #EAE4DC; color: rgb(5, 5, 5); margin-left:0%" href="{{route('shop-cart')}}">
                             <i class="czi-arrow-left mt-sm-0 mr-1"></i>
                             <span
                                 class="d-none d-sm-inline">{{trans('messages.Back')}}   {{trans('messages.Cart')}} </span>
@@ -232,7 +232,7 @@
                     </div>
                     <div class="col-6">
                         @if(auth('customer')->check())
-                            <a class="btn btn-primary btn-block" href="{{route('checkout-shipping')}}">
+                            <a class="btn  btn-block" style="background-color: #AF1C1C; color: white; margin-left:0%" href="{{route('checkout-shipping')}}">
                                 <span class="d-none d-sm-inline">{{trans('messages.proceed_shipping')}}</span>
                                 <span class="d-inline d-sm-none">{{trans('messages.Next')}}</span>
                                 <i class="czi-arrow-right mt-sm-0 ml-1"></i>

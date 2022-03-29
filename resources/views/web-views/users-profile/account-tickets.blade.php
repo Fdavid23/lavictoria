@@ -151,7 +151,7 @@
                                 <label for="detaaddressils">{{trans('messages.describe_your_issue')}}</label>
                                 <textarea class="form-control" rows="6" id="ticket-description"
                                           name="ticket_description"
-                                          required placeholder="Write Here"></textarea>
+                                          required placeholder="Escribir Ahora"></textarea>
                             </div>
                         </div>
                         <div class="modal-footer" style="padding: 0px!important;">

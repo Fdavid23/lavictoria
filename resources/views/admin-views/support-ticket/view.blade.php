@@ -223,7 +223,7 @@
                                 status: status
                             },
                             success: function () {
-                                toastr.success('Ticket closed successfully');
+                                toastr.success('Ticket cerrado con éxito');
                             }
                         });
                     });

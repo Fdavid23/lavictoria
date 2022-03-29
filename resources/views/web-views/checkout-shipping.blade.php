@@ -141,7 +141,7 @@
                     <!-- Navigation (desktop)-->
                     <div class="row">
                         <div class="col-6">
-                            <a class="btn btn-secondary btn-block" href="{{route('checkout-details')}}">
+                            <a class="btn  btn-block" style="background-color: #EAE4DC; color: rgb(3, 3, 3); margin-left:0%" href="{{route('checkout-details')}}">
                                 <i class="czi-arrow-left mt-sm-0 mr-1"></i>
                                 <span
                                     class="d-none d-sm-inline">{{ trans('messages.Back')}} a {{ trans('messages.address')}}</span>
@@ -149,7 +149,7 @@
                             </a>
                         </div>
                         <div class="col-6">
-                            <a class="btn btn-primary btn-block" href="javascript:" onclick="proceed_to_next()">
+                            <a class="btn  btn-block" style="background-color: #AF1C1C; color: white; margin-left:0%" href="javascript:" onclick="proceed_to_next()">
                                 <span class="d-none d-sm-inline">{{ trans('messages.proceed_payment')}}</span>
                                 <span class="d-inline d-sm-none">{{ trans('messages.Next')}}</span>
                                 <i class="czi-arrow-right mt-sm-0 ml-1"></i>

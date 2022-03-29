@@ -419,7 +419,7 @@
                                     style="width:37%; height: 45px">
                                 {{trans('messages.buy_now')}}
                             </button>
-                            <button class="btn btn" style="background-color:#133b07;  color:white"
+                            <button class="btn btn" style="background-color:#47B745;  color:white"
                                     onclick="addToCart()"
                                     type="button"
                                     style="width:37%; height: 45px">

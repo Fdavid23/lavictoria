@@ -125,7 +125,7 @@
                     <!-- Navigation (desktop)-->
                     <div class="row">
                         <div class="col-6">
-                            <a class="btn btn-secondary btn-block"
+                            <a class="btn  btn-block" style="background-color: #EAE4DC; color: rgb(3, 3, 3); margin-left:0%"
                                href="{{route('checkout-payment')}}">
                                 <i class="czi-arrow-left mt-sm-0 mr-1"></i>
                                 <span
@@ -134,7 +134,7 @@
                         </div>
                         <div class="col-6">
                             @if(session('payment_method')=='cash_on_delivery')
-                                <a class="btn btn-primary btn-block" href="{{route('checkout-complete')}}">
+                                <a class="btn btn-block" style="background-color: #AF1C1C; color: white; margin-left:0%" href="{{route('checkout-complete')}}">
                                     <span
                                         class="d-none d-sm-inline">Completar {{ trans('messages.Order')}}</span>
                                     <span class="d-inline d-sm-none">{{ trans('messages.Complete')}}</span>

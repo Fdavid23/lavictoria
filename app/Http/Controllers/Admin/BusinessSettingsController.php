@@ -26,6 +26,15 @@ class BusinessSettingsController extends Controller
 
     }
 
+    public function about_us1()
+    {
+        $about_us = BusinessSetting::where('type', 'about_us1')->first();
+        return view('admin-views.business-settings.about-us1', [
+            'about_us1' => $about_us,
+        ]);
+
+    }
+
     public function about_usUpdate(Request $data)
     {
         $validatedData = $data->validate([

@@ -540,7 +540,12 @@
                                         </a>
                                     </li>
 
-
+                                    <li class="nav-item {{Request::is('admin/business-settings/web-config')?'active':''}}">
+                                        <a class="nav-link " href="{{route('admin.business-settings.about-us1')}}" title="change web config">
+                                            <span class="tio-circle nav-indicator-icon"></span>
+                                            <span class="text-truncate">Ver Deposito</span>
+                                        </a>
+                                    </li>
 
 
 

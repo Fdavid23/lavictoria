@@ -674,18 +674,13 @@
         </div>
     @endif
     {{--deal of the day--}}
-    <div class="container pt-4 mb-4">
-        <div class="row">
+    <div class="container pt-4 mb-4" >
+        <div class="row" >
             <div class="col-xl-3 col-md-4 pb-4">
-                <div class="deal_of_the_day">
+                <div class="deal_of_the_day" >
                     @if(isset($deal_of_the_day))
                         <h1 style="color: white"> {{ trans('messages.deal_of_the_day') }}</h1>
-                        <center>
-                            <strong style="font-size: 21px!important;color: {{$web_config['primary_color']}}">
-                                {{$deal_of_the_day->discount_type=='amount'?\App\CPU\Helpers::currency_converter($deal_of_the_day->discount):$deal_of_the_day->discount.' % '}}
-                             Impuesto
-                            </strong>
-                        </center>
+
                         <div class="d-flex justify-content-center align-items-center" style="padding-top: 37px">
                             <img style="height: 206px;"
                                  src="{{\App\CPU\ProductManager::product_image_path('thumbnail')}}/{{$deal_of_the_day->product['thumbnail']}}"
@@ -693,16 +688,16 @@
                                  alt="">
                         </div>
                         <div style="text-align: center; padding-top: 26px;">
-                            <h5 style="font-weight: 600; color: {{$web_config['primary_color']}}">
+                            <h5 style="font-weight: 600; color: rgb(211, 202, 202)!important;">
                                 {{substr($deal_of_the_day->product['name'],0,40)}} {{strlen($deal_of_the_day->product['name'])>40?'...':''}}
                             </h5>
-                            <span class="text-accent">
+                            <span class="text-accent" style="font-weight: 600; color: rgb(211, 202, 202)!important;">
                                 {{\App\CPU\Helpers::currency_converter(
                                     $deal_of_the_day->product->unit_price-(\App\CPU\Helpers::get_product_discount($deal_of_the_day->product,$deal_of_the_day->product->unit_price))
                                 )}}
                             </span>
                             @if($deal_of_the_day->product->discount > 0)
-                                <strike style="font-size: 12px!important;color: grey!important;">
+                                <strike style="font-size: 15px!important;color: rgb(212, 26, 26)!important;">
                                     {{\App\CPU\Helpers::currency_converter($deal_of_the_day->product->unit_price)}}
                                 </strike>
                             @endif

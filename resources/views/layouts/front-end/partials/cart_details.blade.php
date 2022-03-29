@@ -100,13 +100,13 @@
             </div>
 
             <div class="col-6">
-                <a href="{{route('home')}}" class="btn btn-primary">
-                    <i class="fa fa-backward"></i> Continuar Comprando
+                <a href="{{route('home')}}" class="btn " style="background-color:  #EAE4DC  ; color: dark; ">
+                    <i class="fa fa-backward"></i> Seguir Comprando
                 </a>
             </div>
 
             <div class="col-6">
-                <a href="{{route('checkout-details')}}" class="btn btn-primary pull-right">
+                <a href="{{route('checkout-details')}}" class="btn " style="background-color: #AF1C1C; color: white; margin-left:42%">
                     Continuar con la compra <i class="fa fa-forward"></i>
                 </a>
             </div>

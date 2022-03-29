@@ -366,14 +366,14 @@
                 $("#message").html("");
 
             } else if (password != confirmPassword) {
-                $("#message").html("Passwords do not match!");
+                $("#message").html("¡Las contraseñas no coinciden!");
                 $("#message").attr("style", "color:red");
             } else if (confirmPassword.length <= 6) {
-                $("#message").html("password Must Be 6 Character");
+                $("#message").html("la contraseña debe tener 6 caracteres");
                 $("#message").attr("style", "color:red");
             } else {
 
-                $("#message").html("Passwords match.");
+                $("#message").html("Las contraseñas coinciden.");
                 $("#message").attr("style", "color:green");
             }
 

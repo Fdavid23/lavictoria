@@ -51,13 +51,13 @@
             @if(Request::is('product/*'))
                 <a class="btn btn-primary btn-sm btn-block mb-2" href="{{route('product',$product->slug)}}">
                     <i class="czi-forward align-middle mr-1"></i>
-                    {{trans('messages.View')}}
+                Ver
                 </a>
             @else
                 <a class="btn btn-primary btn-sm btn-block mb-2" href="javascript:"
                    onclick="quickView('{{$product->id}}')">
                     <i class="czi-eye align-middle mr-1"></i>
-                    {{trans('messages.Quick')}}   {{trans('messages.View')}}
+                    Ver
                 </a>
             @endif
         </div>

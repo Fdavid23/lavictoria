@@ -347,7 +347,7 @@
                     <li class="widget-list-item"><a class="widget-list-link"
                                                     href="{{route('helpTopic')}}">{{trans('messages.faq')}}</a></li>
                     <li class="widget-list-item "><a class="widget-list-link"
-                                                         href="{{route('terms')}}">{{trans('messages.terms_&_conditions')}}</a>
+                                                         href="{{route('terms')}}">Términos y Condiciones</a>
 
                     </li>
                     <li class="widget-list-item "><a class="widget-list-link"

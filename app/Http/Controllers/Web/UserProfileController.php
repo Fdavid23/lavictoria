@@ -60,6 +60,8 @@ class UserProfileController extends Controller
             'f_name'   => $request->f_name,
             'l_name'   => $request->l_name,
             'phone'    => $request->phone,
+            'cedula'    => $request->cedula,
+
             'password' => strlen($request->password) > 5 ? bcrypt($request->password) : auth('customer')->user()->password,
         ];
         if (auth('customer')->check()) {
